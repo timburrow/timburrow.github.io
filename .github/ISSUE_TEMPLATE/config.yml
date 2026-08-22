@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Private Attenuator support
+    url: https://timburrow.github.io/attenuator/en/support/
+    about: Use email support when a report may include private or sensitive information.
   - name: Private NMR Tutor support
     url: https://timburrow.github.io/nmrtutor/en/support/
     about: Use email support when a report may include private or sensitive information.

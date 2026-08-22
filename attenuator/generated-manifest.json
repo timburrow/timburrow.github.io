@@ -1,0 +1,19 @@
+{
+  "effective_date": "2026-08-22",
+  "features": [
+    "pulse",
+    "power",
+    "pressure",
+    "field"
+  ],
+  "generator": ".github/scripts/generate_attenuator_site.py",
+  "locales": [
+    "en",
+    "es",
+    "fr",
+    "ja",
+    "ko",
+    "zh-Hans",
+    "zh-Hant"
+  ]
+}

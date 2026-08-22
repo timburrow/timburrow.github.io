@@ -1,0 +1,37 @@
+name: Attenuator feature request
+description: Suggest an Attenuator improvement that can be discussed publicly.
+title: "[Attenuator feature] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not include private, confidential, or personally identifiable information in this public issue.
+  - type: dropdown
+    id: feature
+    attributes:
+      label: Feature area
+      options:
+        - Pulse
+        - Power
+        - Pressure
+        - Field
+        - Settings
+        - New calculation or tool
+    validations:
+      required: true
+  - type: textarea
+    id: need
+    attributes:
+      label: What would you like to accomplish?
+      description: Describe the scientific or engineering workflow.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested improvement
+      description: Explain how the feature could help.
+    validations:
+      required: true

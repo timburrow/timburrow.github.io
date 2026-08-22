@@ -1,0 +1,368 @@
+{
+  "site": {
+    "canonical_origin": "https://timburrow.github.io",
+    "app_store_url": "https://apps.apple.com/ca/app/attenuator/id367216554",
+    "support_email": "utchemnmr@gmail.com",
+    "issues_url": "https://github.com/timburrow/timburrow.github.io/issues",
+    "effective_date": "2026-08-22"
+  },
+  "locales": {
+    "en": {
+      "language_name": "English",
+      "screenshot_locale": "en",
+      "nav": {"home": "Overview", "support": "Support", "privacy": "Privacy", "languages": "Languages", "skip": "Skip to content"},
+      "home": {
+        "eyebrow": "RF and NMR utility",
+        "heading": "Fast answers for power, pulses, pressure, and fields.",
+        "summary": "Calculate attenuation, voltage, and RF power; derive NMR pulse settings; and read supported on-device pressure and magnetic-field sensors.",
+        "download_cta": "Download Attenuator",
+        "support_cta": "Get support",
+        "platforms": "Available for iPhone and compatible with Apple Vision.",
+        "features": [
+          {"id": "pulse", "title": "NMR pulse calculations", "body": "Calculate pulse lengths, B1 field, and RF power from reference pulse and power values."},
+          {"id": "power", "title": "Attenuation and power", "body": "Work across Vpp, Vrms, watts, dBm, and dB with an adjustable impedance."},
+          {"id": "pressure", "title": "Barometric pressure", "body": "Read local pressure from a supported device’s barometer and choose the units you need."},
+          {"id": "field", "title": "Magnetic field", "body": "Check the local magnetic field using the device magnetometer, with clear strong-field safety warnings."}
+        ]
+      },
+      "support": {
+        "title": "Attenuator Support",
+        "intro": "Use these checks for common questions, contact the developer privately, or report a reproducible issue publicly.",
+        "cards": [
+          {"title": "Power or pulse results", "body": "Check the selected Vpp or Vrms convention, impedance, dB/dBm values, unit prefix, and NMR reference pulse and power before comparing results."},
+          {"title": "Barometer", "body": "Barometer requires a device with a pressure sensor and may show Apple’s Motion permission dialog. The reading is processed on-device and is not tracked or sent to the developer."},
+          {"title": "Magnetic field", "body": "Field requires a device magnetometer and may show Apple’s Location permission dialog because the app reads heading sensor data. Readings stay on-device. Keep the phone away from extremely strong magnetic fields."}
+        ],
+        "email_title": "Private support",
+        "email_body": "Email utchemnmr@gmail.com with the app version, iPhone model, iOS version, and a short description of what happened.",
+        "email_cta": "Email Attenuator support",
+        "issues_title": "Public bug reports and requests",
+        "issues_body": "Use GitHub Issues for reproducible bugs and feature suggestions that can be discussed publicly.",
+        "issues_warning": "Do not post private, confidential, or personally identifiable information in a public issue.",
+        "issues_cta": "Open GitHub Issues"
+      },
+      "privacy": {
+        "title": "Attenuator Privacy Policy",
+        "effective_label": "Effective date",
+        "intro": "Attenuator does not collect data or track you. Calculations, settings, and sensor readings remain on your device.",
+        "sections": [
+          {"title": "Data collection and tracking", "body": "Attenuator has no user accounts, advertising, analytics, tracking, or developer-operated online service. The developer does not collect data from the app."},
+          {"title": "Barometer and Motion permission", "body": "The Barometer feature uses the device pressure sensor and may trigger Apple’s Motion permission dialog. Pressure readings are processed on-device and are not collected, stored by the developer, or transmitted."},
+          {"title": "Magnetic field and Location permission", "body": "The Field feature uses heading data from the device magnetometer and may trigger Apple’s Location permission dialog. Attenuator uses this access only to display the local magnetic-field reading. The app does not track, collect, store, or transmit your location or sensor reading."},
+          {"title": "Settings", "body": "Calculator values, units, and preferences are stored locally on the device using Apple’s standard settings storage."},
+          {"title": "Support correspondence", "body": "If you email support, you choose what information to provide. It is used only to address the support request and retained only as long as reasonably needed for that purpose."},
+          {"title": "This website", "body": "This static website adds no owner-controlled analytics, advertising, forms, or tracking cookies. GitHub hosts the site and may process ordinary technical request information under GitHub’s privacy statement."},
+          {"title": "Changes and contact", "body": "This policy will be updated if the app’s data practices change. Questions can be sent to utchemnmr@gmail.com."}
+        ],
+        "translation_notice": "The English privacy policy is authoritative. Translations are provided for convenience."
+      },
+      "footer": "Attenuator support and privacy"
+    },
+    "es": {
+      "language_name": "Español",
+      "screenshot_locale": "en",
+      "nav": {"home": "Descripción", "support": "Soporte", "privacy": "Privacidad", "languages": "Idiomas", "skip": "Ir al contenido"},
+      "home": {
+        "eyebrow": "Utilidad para RF y RMN",
+        "heading": "Respuestas rápidas para potencia, pulsos, presión y campos.",
+        "summary": "Calcule atenuación, voltaje y potencia RF; determine ajustes de pulsos de RMN; y consulte sensores compatibles de presión y campo magnético del dispositivo.",
+        "download_cta": "Descargar Attenuator",
+        "support_cta": "Obtener soporte",
+        "platforms": "Disponible para iPhone y compatible con Apple Vision.",
+        "features": [
+          {"id": "pulse", "title": "Cálculos de pulsos de RMN", "body": "Calcule duraciones de pulso, campo B1 y potencia RF a partir de valores de pulso y potencia de referencia."},
+          {"id": "power", "title": "Atenuación y potencia", "body": "Trabaje con Vpp, Vrms, vatios, dBm y dB, y ajuste la impedancia."},
+          {"id": "pressure", "title": "Presión barométrica", "body": "Consulte la presión local con el barómetro de un dispositivo compatible y seleccione las unidades necesarias."},
+          {"id": "field", "title": "Campo magnético", "body": "Compruebe el campo magnético local con el magnetómetro del dispositivo y avisos claros para campos intensos."}
+        ]
+      },
+      "support": {
+        "title": "Soporte de Attenuator",
+        "intro": "Revise estas soluciones para preguntas frecuentes, contacte al desarrollador en privado o informe públicamente un problema reproducible.",
+        "cards": [
+          {"title": "Resultados de potencia o pulso", "body": "Compruebe la convención Vpp o Vrms, la impedancia, los valores dB/dBm, el prefijo de unidad y el pulso y la potencia de referencia de RMN."},
+          {"title": "Barómetro", "body": "El barómetro requiere un dispositivo con sensor de presión y puede mostrar el permiso de Movimiento de Apple. La lectura se procesa en el dispositivo; no se rastrea ni se envía al desarrollador."},
+          {"title": "Campo magnético", "body": "Campo requiere un magnetómetro y puede mostrar el permiso de Localización de Apple porque la app consulta datos de orientación. Las lecturas permanecen en el dispositivo. Mantenga el teléfono alejado de campos magnéticos extremadamente intensos."}
+        ],
+        "email_title": "Soporte privado",
+        "email_body": "Escriba a utchemnmr@gmail.com e incluya la versión de la app, el modelo de iPhone, la versión de iOS y una breve descripción del problema.",
+        "email_cta": "Enviar un correo al soporte",
+        "issues_title": "Errores y solicitudes públicas",
+        "issues_body": "Use GitHub Issues para errores reproducibles y sugerencias que puedan debatirse públicamente.",
+        "issues_warning": "No publique información privada, confidencial o de identificación personal en un issue público.",
+        "issues_cta": "Abrir GitHub Issues"
+      },
+      "privacy": {
+        "title": "Política de privacidad de Attenuator",
+        "effective_label": "Fecha de entrada en vigor",
+        "intro": "Attenuator no recopila datos ni realiza seguimiento. Los cálculos, ajustes y lecturas de sensores permanecen en el dispositivo.",
+        "sections": [
+          {"title": "Recopilación y seguimiento", "body": "Attenuator no tiene cuentas, publicidad, analítica, seguimiento ni servicios en línea operados por el desarrollador. El desarrollador no recopila datos de la app."},
+          {"title": "Barómetro y permiso de Movimiento", "body": "La función Barómetro usa el sensor de presión y puede activar el permiso de Movimiento de Apple. Las lecturas se procesan en el dispositivo y no son recopiladas, almacenadas por el desarrollador ni transmitidas."},
+          {"title": "Campo magnético y permiso de Localización", "body": "La función Campo usa datos de orientación del magnetómetro y puede activar el permiso de Localización de Apple. Attenuator usa este acceso únicamente para mostrar el campo magnético local. No rastrea, recopila, almacena ni transmite la ubicación o las lecturas."},
+          {"title": "Ajustes", "body": "Los valores, unidades y preferencias se guardan localmente mediante el almacenamiento estándar de ajustes de Apple."},
+          {"title": "Correspondencia de soporte", "body": "Si escribe al soporte, usted decide qué información proporcionar. Se usa únicamente para atender la solicitud y se conserva solo durante el tiempo razonablemente necesario."},
+          {"title": "Este sitio web", "body": "Este sitio estático no añade analítica, publicidad, formularios ni cookies de seguimiento controlados por el propietario. GitHub aloja el sitio y puede procesar datos técnicos ordinarios según su política de privacidad."},
+          {"title": "Cambios y contacto", "body": "La política se actualizará si cambian las prácticas de datos. Puede escribir a utchemnmr@gmail.com."}
+        ],
+        "translation_notice": "La política en inglés es la versión oficial. Esta traducción se proporciona por comodidad."
+      },
+      "footer": "Soporte y privacidad de Attenuator"
+    },
+    "fr": {
+      "language_name": "Français",
+      "screenshot_locale": "fr",
+      "nav": {"home": "Présentation", "support": "Assistance", "privacy": "Confidentialité", "languages": "Langues", "skip": "Aller au contenu"},
+      "home": {
+        "eyebrow": "Utilitaire RF et RMN",
+        "heading": "Des réponses rapides pour la puissance, les impulsions, la pression et les champs.",
+        "summary": "Calculez l’atténuation, la tension et la puissance RF, déterminez des réglages d’impulsions RMN et consultez les capteurs compatibles de pression et de champ magnétique de l’appareil.",
+        "download_cta": "Télécharger Attenuator",
+        "support_cta": "Obtenir de l’aide",
+        "platforms": "Disponible sur iPhone et compatible avec Apple Vision.",
+        "features": [
+          {"id": "pulse", "title": "Calculs d’impulsions RMN", "body": "Calculez la durée d’impulsion, le champ B1 et la puissance RF à partir d’une impulsion et d’une puissance de référence."},
+          {"id": "power", "title": "Atténuation et puissance", "body": "Travaillez en Vpp, Vrms, watts, dBm et dB avec une impédance réglable."},
+          {"id": "pressure", "title": "Pression barométrique", "body": "Consultez la pression locale avec le baromètre d’un appareil compatible et choisissez vos unités."},
+          {"id": "field", "title": "Champ magnétique", "body": "Contrôlez le champ magnétique local avec le magnétomètre et des avertissements clairs pour les champs intenses."}
+        ]
+      },
+      "support": {
+        "title": "Assistance Attenuator",
+        "intro": "Consultez ces solutions aux questions courantes, contactez le développeur en privé ou signalez publiquement un problème reproductible.",
+        "cards": [
+          {"title": "Résultats de puissance ou d’impulsion", "body": "Vérifiez la convention Vpp ou Vrms, l’impédance, les valeurs dB/dBm, le préfixe d’unité ainsi que l’impulsion et la puissance RMN de référence."},
+          {"title": "Baromètre", "body": "Le baromètre nécessite un capteur de pression et peut afficher la demande d’autorisation Mouvement d’Apple. La mesure est traitée sur l’appareil; elle n’est ni suivie ni envoyée au développeur."},
+          {"title": "Champ magnétique", "body": "Champ nécessite un magnétomètre et peut afficher la demande d’autorisation Localisation d’Apple, car l’app consulte les données d’orientation. Les mesures restent sur l’appareil. Éloignez le téléphone des champs magnétiques extrêmement intenses."}
+        ],
+        "email_title": "Assistance privée",
+        "email_body": "Écrivez à utchemnmr@gmail.com en indiquant la version de l’app, le modèle d’iPhone, la version d’iOS et une brève description du problème.",
+        "email_cta": "Écrire à l’assistance",
+        "issues_title": "Bugs et demandes publiques",
+        "issues_body": "Utilisez GitHub Issues pour les bugs reproductibles et les suggestions pouvant être discutées publiquement.",
+        "issues_warning": "Ne publiez aucune information privée, confidentielle ou permettant de vous identifier dans un issue public.",
+        "issues_cta": "Ouvrir GitHub Issues"
+      },
+      "privacy": {
+        "title": "Politique de confidentialité d’Attenuator",
+        "effective_label": "Date d’entrée en vigueur",
+        "intro": "Attenuator ne collecte aucune donnée et ne vous suit pas. Les calculs, réglages et mesures des capteurs restent sur l’appareil.",
+        "sections": [
+          {"title": "Collecte de données et suivi", "body": "Attenuator ne comporte ni compte, ni publicité, ni analytique, ni suivi, ni service en ligne exploité par le développeur. Le développeur ne collecte aucune donnée provenant de l’app."},
+          {"title": "Baromètre et autorisation Mouvement", "body": "La fonction Baromètre utilise le capteur de pression et peut déclencher la demande d’autorisation Mouvement d’Apple. Les mesures sont traitées sur l’appareil; elles ne sont ni collectées, ni stockées par le développeur, ni transmises."},
+          {"title": "Champ magnétique et autorisation Localisation", "body": "La fonction Champ utilise les données d’orientation du magnétomètre et peut déclencher la demande d’autorisation Localisation d’Apple. Cet accès sert uniquement à afficher le champ magnétique local. L’app ne suit, ne collecte, ne stocke et ne transmet ni votre position ni les mesures."},
+          {"title": "Réglages", "body": "Les valeurs, unités et préférences sont conservées localement avec le stockage standard des réglages Apple."},
+          {"title": "Correspondance avec l’assistance", "body": "Si vous écrivez à l’assistance, vous choisissez les informations fournies. Elles servent uniquement à traiter la demande et ne sont conservées que pendant la durée raisonnablement nécessaire."},
+          {"title": "Ce site web", "body": "Ce site statique n’ajoute ni analytique, ni publicité, ni formulaire, ni cookie de suivi contrôlé par son propriétaire. GitHub héberge le site et peut traiter les données techniques ordinaires conformément à sa politique de confidentialité."},
+          {"title": "Modifications et contact", "body": "Cette politique sera actualisée si les pratiques de données changent. Écrivez à utchemnmr@gmail.com pour toute question."}
+        ],
+        "translation_notice": "La politique de confidentialité anglaise fait foi. Cette traduction est fournie à titre pratique."
+      },
+      "footer": "Assistance et confidentialité d’Attenuator"
+    },
+    "ja": {
+      "language_name": "日本語",
+      "screenshot_locale": "ja",
+      "nav": {"home": "概要", "support": "サポート", "privacy": "プライバシー", "languages": "言語", "skip": "本文へ移動"},
+      "home": {
+        "eyebrow": "RF・NMRユーティリティ",
+        "heading": "電力、パルス、圧力、磁場をすばやく計算・確認。",
+        "summary": "減衰、電圧、RF電力を計算し、NMRパルス条件を求め、対応デバイスの気圧センサーと磁場センサーを確認できます。",
+        "download_cta": "Attenuatorをダウンロード",
+        "support_cta": "サポートを見る",
+        "platforms": "iPhoneで利用でき、Apple Visionにも対応しています。",
+        "features": [
+          {"id": "pulse", "title": "NMRパルス計算", "body": "基準パルスと基準電力から、パルス時間、B1磁場、RF電力を計算します。"},
+          {"id": "power", "title": "減衰と電力", "body": "Vpp、Vrms、ワット、dBm、dBを相互に扱い、インピーダンスも設定できます。"},
+          {"id": "pressure", "title": "気圧", "body": "対応デバイスの気圧センサーで現在の気圧を確認し、必要な単位を選べます。"},
+          {"id": "field", "title": "磁場", "body": "デバイスの磁力計で周囲の磁場を確認し、強磁場に関する明確な警告を表示します。"}
+        ]
+      },
+      "support": {
+        "title": "Attenuatorサポート",
+        "intro": "よくある問題の確認方法、非公開での問い合わせ、公開できる再現可能な問題の報告方法をご案内します。",
+        "cards": [
+          {"title": "電力またはパルスの計算結果", "body": "Vpp/Vrmsの選択、インピーダンス、dB/dBm値、単位接頭語、NMRの基準パルスと基準電力を確認してください。"},
+          {"title": "気圧", "body": "気圧センサーを備えたデバイスが必要で、Appleの「モーション」権限ダイアログが表示される場合があります。測定値はデバイス内で処理され、追跡されたり開発者へ送信されたりしません。"},
+          {"title": "磁場", "body": "磁力計が必要で、方位センサーデータを読むためAppleの「位置情報」権限ダイアログが表示される場合があります。測定値はデバイス内に留まります。極めて強い磁場にiPhoneを近づけないでください。"}
+        ],
+        "email_title": "非公開サポート",
+        "email_body": "アプリのバージョン、iPhoneモデル、iOSバージョン、問題の概要を添えてutchemnmr@gmail.comへメールしてください。",
+        "email_cta": "サポートにメールする",
+        "issues_title": "公開の不具合報告・要望",
+        "issues_body": "公開して話し合える再現可能な不具合や機能提案にはGitHub Issuesをご利用ください。",
+        "issues_warning": "公開Issueに個人情報、機密情報、非公開情報を書き込まないでください。",
+        "issues_cta": "GitHub Issuesを開く"
+      },
+      "privacy": {
+        "title": "Attenuatorプライバシーポリシー",
+        "effective_label": "発効日",
+        "intro": "Attenuatorはデータを収集せず、ユーザーを追跡しません。計算、設定、センサー測定値はデバイス内に留まります。",
+        "sections": [
+          {"title": "データ収集と追跡", "body": "Attenuatorにはユーザーアカウント、広告、解析、追跡、開発者が運用するオンラインサービスはありません。開発者はアプリからデータを収集しません。"},
+          {"title": "気圧とモーション権限", "body": "気圧機能はデバイスの気圧センサーを使用し、Appleの「モーション」権限ダイアログが表示される場合があります。測定値はデバイス内で処理され、収集、開発者による保存、送信は行われません。"},
+          {"title": "磁場と位置情報権限", "body": "磁場機能は磁力計の方位データを使用し、Appleの「位置情報」権限ダイアログが表示される場合があります。このアクセスは周囲の磁場を表示するためだけに使用されます。位置情報や測定値を追跡、収集、保存、送信しません。"},
+          {"title": "設定", "body": "計算値、単位、環境設定はAppleの標準設定ストレージを使ってデバイス内に保存されます。"},
+          {"title": "サポートへの連絡", "body": "メールで提供する情報はユーザーが選択します。サポート依頼への対応にのみ使用し、その目的に合理的に必要な期間だけ保持します。"},
+          {"title": "このWebサイト", "body": "この静的サイトは、運営者による解析、広告、フォーム、トラッキングCookieを追加しません。GitHubがサイトをホストし、同社のプライバシーポリシーに基づいて通常の技術的リクエスト情報を処理する場合があります。"},
+          {"title": "変更と連絡先", "body": "データの取り扱いが変わった場合は本ポリシーを更新します。お問い合わせはutchemnmr@gmail.comへお送りください。"}
+        ],
+        "translation_notice": "英語版のプライバシーポリシーが正式版です。本翻訳は便宜のために提供されています。"
+      },
+      "footer": "Attenuatorのサポートとプライバシー"
+    },
+    "ko": {
+      "language_name": "한국어",
+      "screenshot_locale": "en",
+      "nav": {"home": "개요", "support": "지원", "privacy": "개인정보 보호", "languages": "언어", "skip": "본문으로 이동"},
+      "home": {
+        "eyebrow": "RF 및 NMR 유틸리티",
+        "heading": "전력, 펄스, 압력, 자기장을 빠르게 계산하고 확인하세요.",
+        "summary": "감쇠, 전압, RF 전력을 계산하고 NMR 펄스 조건을 구하며 지원되는 기기의 압력 및 자기장 센서를 확인합니다.",
+        "download_cta": "Attenuator 다운로드",
+        "support_cta": "지원 받기",
+        "platforms": "iPhone에서 사용할 수 있으며 Apple Vision과 호환됩니다.",
+        "features": [
+          {"id": "pulse", "title": "NMR 펄스 계산", "body": "기준 펄스와 기준 전력에서 펄스 길이, B1 자기장, RF 전력을 계산합니다."},
+          {"id": "power", "title": "감쇠 및 전력", "body": "Vpp, Vrms, 와트, dBm, dB를 변환하고 임피던스를 조정할 수 있습니다."},
+          {"id": "pressure", "title": "기압", "body": "지원되는 기기의 기압 센서로 현재 압력을 확인하고 필요한 단위를 선택합니다."},
+          {"id": "field", "title": "자기장", "body": "기기 자력계로 주변 자기장을 확인하고 강한 자기장에 대한 명확한 경고를 제공합니다."}
+        ]
+      },
+      "support": {
+        "title": "Attenuator 지원",
+        "intro": "일반적인 문제를 확인하고, 개발자에게 비공개로 문의하거나 재현 가능한 문제를 공개적으로 보고할 수 있습니다.",
+        "cards": [
+          {"title": "전력 또는 펄스 결과", "body": "Vpp/Vrms 선택, 임피던스, dB/dBm 값, 단위 접두어, NMR 기준 펄스와 기준 전력을 확인하세요."},
+          {"title": "기압", "body": "압력 센서가 있는 기기가 필요하며 Apple의 동작 권한 대화상자가 표시될 수 있습니다. 측정값은 기기에서 처리되며 추적되거나 개발자에게 전송되지 않습니다."},
+          {"title": "자기장", "body": "자력계가 필요하며 방향 센서 데이터를 읽기 위해 Apple의 위치 권한 대화상자가 표시될 수 있습니다. 측정값은 기기에만 남습니다. iPhone을 매우 강한 자기장에 가까이 두지 마세요."}
+        ],
+        "email_title": "비공개 지원",
+        "email_body": "앱 버전, iPhone 모델, iOS 버전, 문제에 대한 간단한 설명을 포함하여 utchemnmr@gmail.com으로 이메일을 보내세요.",
+        "email_cta": "지원팀에 이메일 보내기",
+        "issues_title": "공개 버그 보고 및 요청",
+        "issues_body": "공개적으로 논의할 수 있는 재현 가능한 버그와 기능 제안은 GitHub Issues를 이용하세요.",
+        "issues_warning": "공개 Issue에 개인정보, 기밀 정보 또는 개인 식별 정보를 게시하지 마세요.",
+        "issues_cta": "GitHub Issues 열기"
+      },
+      "privacy": {
+        "title": "Attenuator 개인정보 처리방침",
+        "effective_label": "시행일",
+        "intro": "Attenuator는 데이터를 수집하거나 사용자를 추적하지 않습니다. 계산, 설정 및 센서 측정값은 기기에 남습니다.",
+        "sections": [
+          {"title": "데이터 수집 및 추적", "body": "Attenuator에는 사용자 계정, 광고, 분석, 추적 또는 개발자가 운영하는 온라인 서비스가 없습니다. 개발자는 앱에서 데이터를 수집하지 않습니다."},
+          {"title": "기압계 및 동작 권한", "body": "기압 기능은 기기의 압력 센서를 사용하며 Apple의 동작 권한 대화상자를 표시할 수 있습니다. 측정값은 기기에서 처리되며 수집, 개발자 저장 또는 전송되지 않습니다."},
+          {"title": "자기장 및 위치 권한", "body": "자기장 기능은 자력계의 방향 데이터를 사용하며 Apple의 위치 권한 대화상자를 표시할 수 있습니다. 이 접근 권한은 주변 자기장 표시 용도로만 사용됩니다. 위치나 측정값을 추적, 수집, 저장 또는 전송하지 않습니다."},
+          {"title": "설정", "body": "계산 값, 단위 및 환경설정은 Apple 표준 설정 저장소를 사용하여 기기에 저장됩니다."},
+          {"title": "지원 연락", "body": "이메일로 제공할 정보는 사용자가 선택합니다. 지원 요청 처리에만 사용하며 해당 목적에 합리적으로 필요한 기간 동안만 보관합니다."},
+          {"title": "이 웹사이트", "body": "이 정적 사이트는 소유자가 제어하는 분석, 광고, 양식 또는 추적 쿠키를 추가하지 않습니다. GitHub가 사이트를 호스팅하며 자체 개인정보 처리방침에 따라 일반적인 기술 요청 정보를 처리할 수 있습니다."},
+          {"title": "변경 및 연락처", "body": "앱의 데이터 처리 방식이 변경되면 이 방침을 업데이트합니다. 문의는 utchemnmr@gmail.com으로 보내세요."}
+        ],
+        "translation_notice": "영문 개인정보 처리방침이 공식 버전입니다. 번역은 편의를 위해 제공됩니다."
+      },
+      "footer": "Attenuator 지원 및 개인정보 보호"
+    },
+    "zh-Hans": {
+      "language_name": "简体中文",
+      "screenshot_locale": "zh-Hans",
+      "nav": {"home": "概览", "support": "支持", "privacy": "隐私", "languages": "语言", "skip": "跳到正文"},
+      "home": {
+        "eyebrow": "RF 与 NMR 实用工具",
+        "heading": "快速计算和查看功率、脉冲、气压与磁场。",
+        "summary": "计算衰减、电压和 RF 功率，推算 NMR 脉冲参数，并查看支持设备上的气压与磁场传感器读数。",
+        "download_cta": "下载 Attenuator",
+        "support_cta": "获取支持",
+        "platforms": "可在 iPhone 上使用，并兼容 Apple Vision。",
+        "features": [
+          {"id": "pulse", "title": "NMR 脉冲计算", "body": "根据参考脉冲和参考功率计算脉冲时长、B1 场和 RF 功率。"},
+          {"id": "power", "title": "衰减与功率", "body": "换算 Vpp、Vrms、瓦特、dBm 和 dB，并可调整阻抗。"},
+          {"id": "pressure", "title": "气压", "body": "使用支持设备的气压传感器查看当前气压，并选择所需单位。"},
+          {"id": "field", "title": "磁场", "body": "使用设备磁力计查看周围磁场，并显示清晰的强磁场安全警告。"}
+        ]
+      },
+      "support": {
+        "title": "Attenuator 支持",
+        "intro": "查看常见问题的排查方法，私下联系开发者，或公开报告可重现的问题。",
+        "cards": [
+          {"title": "功率或脉冲结果", "body": "请检查 Vpp/Vrms 选择、阻抗、dB/dBm 数值、单位前缀以及 NMR 参考脉冲和参考功率。"},
+          {"title": "气压", "body": "需要配备气压传感器的设备，并可能显示 Apple 的“运动”权限对话框。读数仅在设备上处理，不会被跟踪或发送给开发者。"},
+          {"title": "磁场", "body": "需要设备磁力计，并可能因读取方向传感器数据而显示 Apple 的“位置”权限对话框。读数保留在设备上。请让 iPhone 远离极强磁场。"}
+        ],
+        "email_title": "私密支持",
+        "email_body": "请发送邮件至 utchemnmr@gmail.com，并注明 App 版本、iPhone 型号、iOS 版本和问题简述。",
+        "email_cta": "给支持邮箱发送邮件",
+        "issues_title": "公开错误报告与请求",
+        "issues_body": "可公开讨论的可重现错误和功能建议请使用 GitHub Issues。",
+        "issues_warning": "请勿在公开 Issue 中发布私人、机密或个人身份信息。",
+        "issues_cta": "打开 GitHub Issues"
+      },
+      "privacy": {
+        "title": "Attenuator 隐私政策",
+        "effective_label": "生效日期",
+        "intro": "Attenuator 不收集数据，也不跟踪您。计算、设置和传感器读数均保留在设备上。",
+        "sections": [
+          {"title": "数据收集与跟踪", "body": "Attenuator 没有用户帐户、广告、分析、跟踪或开发者运营的在线服务。开发者不从 App 收集数据。"},
+          {"title": "气压与运动权限", "body": "气压功能使用设备气压传感器，并可能触发 Apple 的“运动”权限对话框。读数在设备上处理，不会被收集、由开发者存储或传输。"},
+          {"title": "磁场与位置权限", "body": "磁场功能使用磁力计的方向数据，并可能触发 Apple 的“位置”权限对话框。此权限仅用于显示周围磁场。App 不会跟踪、收集、存储或传输您的位置或传感器读数。"},
+          {"title": "设置", "body": "计算值、单位和偏好设置通过 Apple 标准设置存储保存在设备上。"},
+          {"title": "支持通信", "body": "您自行选择在支持邮件中提供的信息。信息仅用于处理支持请求，并仅在该目的合理需要的期限内保留。"},
+          {"title": "本网站", "body": "此静态网站不添加由所有者控制的分析、广告、表单或跟踪 Cookie。GitHub 托管本网站，并可能根据其隐私声明处理常规技术请求信息。"},
+          {"title": "变更与联系", "body": "如果 App 的数据处理方式发生变化，本政策将随之更新。如有疑问，请发送邮件至 utchemnmr@gmail.com。"}
+        ],
+        "translation_notice": "英文隐私政策为权威版本。本译文仅为方便阅读而提供。"
+      },
+      "footer": "Attenuator 支持与隐私"
+    },
+    "zh-Hant": {
+      "language_name": "繁體中文",
+      "screenshot_locale": "zh-Hant",
+      "nav": {"home": "概覽", "support": "支援", "privacy": "隱私權", "languages": "語言", "skip": "跳至主要內容"},
+      "home": {
+        "eyebrow": "RF 與 NMR 實用工具",
+        "heading": "快速計算和查看功率、脈衝、氣壓與磁場。",
+        "summary": "計算衰減、電壓和 RF 功率，推算 NMR 脈衝參數，並查看支援裝置上的氣壓與磁場感測器讀數。",
+        "download_cta": "下載 Attenuator",
+        "support_cta": "取得支援",
+        "platforms": "可在 iPhone 上使用，並相容於 Apple Vision。",
+        "features": [
+          {"id": "pulse", "title": "NMR 脈衝計算", "body": "根據參考脈衝和參考功率計算脈衝時間、B1 場和 RF 功率。"},
+          {"id": "power", "title": "衰減與功率", "body": "換算 Vpp、Vrms、瓦特、dBm 和 dB，並可調整阻抗。"},
+          {"id": "pressure", "title": "氣壓", "body": "使用支援裝置的氣壓感測器查看目前氣壓，並選擇所需單位。"},
+          {"id": "field", "title": "磁場", "body": "使用裝置磁力計查看周圍磁場，並顯示清楚的強磁場安全警告。"}
+        ]
+      },
+      "support": {
+        "title": "Attenuator 支援",
+        "intro": "查看常見問題的排解方式、私下聯絡開發者，或公開回報可重現的問題。",
+        "cards": [
+          {"title": "功率或脈衝結果", "body": "請檢查 Vpp/Vrms 選擇、阻抗、dB/dBm 數值、單位前綴，以及 NMR 參考脈衝和參考功率。"},
+          {"title": "氣壓", "body": "需要配備氣壓感測器的裝置，並可能顯示 Apple 的「動作」權限對話框。讀數只在裝置上處理，不會被追蹤或傳送給開發者。"},
+          {"title": "磁場", "body": "需要裝置磁力計，並可能因讀取方向感測器資料而顯示 Apple 的「位置」權限對話框。讀數保留在裝置上。請讓 iPhone 遠離極強磁場。"}
+        ],
+        "email_title": "私密支援",
+        "email_body": "請寄信至 utchemnmr@gmail.com，並註明 App 版本、iPhone 型號、iOS 版本和問題簡述。",
+        "email_cta": "寄信給支援人員",
+        "issues_title": "公開錯誤回報與需求",
+        "issues_body": "可公開討論的可重現錯誤和功能建議請使用 GitHub Issues。",
+        "issues_warning": "請勿在公開 Issue 中張貼私人、機密或個人識別資訊。",
+        "issues_cta": "開啟 GitHub Issues"
+      },
+      "privacy": {
+        "title": "Attenuator 隱私權政策",
+        "effective_label": "生效日期",
+        "intro": "Attenuator 不收集資料，也不追蹤您。計算、設定和感測器讀數均保留在裝置上。",
+        "sections": [
+          {"title": "資料收集與追蹤", "body": "Attenuator 沒有使用者帳號、廣告、分析、追蹤或開發者營運的線上服務。開發者不會從 App 收集資料。"},
+          {"title": "氣壓與動作權限", "body": "氣壓功能使用裝置氣壓感測器，並可能觸發 Apple 的「動作」權限對話框。讀數在裝置上處理，不會被收集、由開發者儲存或傳輸。"},
+          {"title": "磁場與位置權限", "body": "磁場功能使用磁力計的方向資料，並可能觸發 Apple 的「位置」權限對話框。此權限只用於顯示周圍磁場。App 不會追蹤、收集、儲存或傳輸您的位置或感測器讀數。"},
+          {"title": "設定", "body": "計算值、單位和偏好設定透過 Apple 標準設定儲存保存在裝置上。"},
+          {"title": "支援通訊", "body": "您自行選擇在支援郵件中提供的資訊。資訊只用於處理支援需求，並僅在該目的合理需要的期間內保留。"},
+          {"title": "本網站", "body": "此靜態網站不加入由擁有者控制的分析、廣告、表單或追蹤 Cookie。GitHub 託管本網站，並可能依其隱私權聲明處理一般技術請求資訊。"},
+          {"title": "變更與聯絡", "body": "如果 App 的資料處理方式有變，本政策將隨之更新。如有疑問，請寄信至 utchemnmr@gmail.com。"}
+        ],
+        "translation_notice": "英文隱私權政策為權威版本。本譯文僅為方便閱讀而提供。"
+      },
+      "footer": "Attenuator 支援與隱私權"
+    }
+  }
+}
