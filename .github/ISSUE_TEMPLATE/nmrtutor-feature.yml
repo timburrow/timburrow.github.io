@@ -1,0 +1,35 @@
+name: NMR Tutor feature request
+description: Suggest an improvement that can be discussed publicly.
+title: "[NMR Tutor feature] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not include confidential, proprietary, patient, or personally identifiable datasets in this public issue.
+  - type: textarea
+    id: need
+    attributes:
+      label: What would you like to accomplish?
+      description: Describe the workflow or learning need rather than only a proposed control.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested improvement
+      description: Explain how the feature could help.
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Most relevant platform
+      options:
+        - All platforms
+        - iPhone
+        - iPad
+        - Mac
+    validations:
+      required: true

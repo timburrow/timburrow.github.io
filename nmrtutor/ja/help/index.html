@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="このガイドは、アプリに収録されているものと同じローカライズ済みヘルプソースから生成されています。">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>NMR FID学習ラボ ヘルプ · NMR FID学習ラボ</title>
+  <link rel="canonical" href="https://timburrow.github.io/nmrtutor/ja/help/">
+  <link rel="alternate" hreflang="en" href="https://timburrow.github.io/nmrtutor/en/help/">
+<link rel="alternate" hreflang="de" href="https://timburrow.github.io/nmrtutor/de/help/">
+<link rel="alternate" hreflang="es" href="https://timburrow.github.io/nmrtutor/es/help/">
+<link rel="alternate" hreflang="es-419" href="https://timburrow.github.io/nmrtutor/es-419/help/">
+<link rel="alternate" hreflang="fr" href="https://timburrow.github.io/nmrtutor/fr/help/">
+<link rel="alternate" hreflang="ja" href="https://timburrow.github.io/nmrtutor/ja/help/">
+<link rel="alternate" hreflang="ko" href="https://timburrow.github.io/nmrtutor/ko/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://timburrow.github.io/nmrtutor/pt-BR/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://timburrow.github.io/nmrtutor/zh-Hans/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://timburrow.github.io/nmrtutor/zh-Hant/help/">
+<link rel="alternate" hreflang="x-default" href="https://timburrow.github.io/nmrtutor/en/help/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NMR FID学習ラボ ヘルプ">
+  <meta property="og:description" content="このガイドは、アプリに収録されているものと同じローカライズ済みヘルプソースから生成されています。">
+  <meta property="og:url" content="https://timburrow.github.io/nmrtutor/ja/help/">
+  <meta property="og:image" content="https://timburrow.github.io/nmrtutor/assets/ipad.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/nmrtutor/assets/app-icon.png">
+  <link rel="stylesheet" href="/nmrtutor/assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <a class="brand" href="/nmrtutor/ja/">
+      <img src="/nmrtutor/assets/app-icon.png" width="44" height="44" alt="">
+      <span>NMR FID学習ラボ</span>
+    </a>
+    <nav class="primary-nav" aria-label="NMR FID学習ラボ"><a href="/nmrtutor/ja/">概要</a><a href="/nmrtutor/ja/help/" aria-current="page">ヘルプ</a><a href="/nmrtutor/ja/support/">サポート</a><a href="/nmrtutor/ja/privacy/">プライバシー</a></nav>
+  </header>
+  <main id="main">
+    <section class="page-intro">
+      <p class="eyebrow">NMR FID学習ラボ</p>
+      <h1>NMR FID学習ラボ ヘルプ</h1>
+      <p class="lede">このガイドは、アプリに収録されているものと同じローカライズ済みヘルプソースから生成されています。</p>
+    </section>
+    <div class="help-layout">
+      <aside class="toc"><h2>このガイドのトピック</h2><ol><li class="toc-level-2"><a href="#quickOrientation">クイックガイド</a></li><li class="toc-level-2"><a href="#suggestedWorkflow">推奨されるワークフロー</a></li><li class="toc-level-3"><a href="#setupPeaks">ピークの設定</a></li><li class="toc-level-3"><a href="#relaxationIntegration">緩和と積分</a></li><li class="toc-level-3"><a href="#apodization">窓関数</a></li><li class="toc-level-3"><a href="#noiseFID">FID ノイズ</a></li><li class="toc-level-3"><a href="#mangleFID">FID の乱れ</a></li><li class="toc-level-3"><a href="#fourierTransform">フーリエ変換</a></li><li class="toc-level-3"><a href="#phaseSpectrum">位相補正</a></li><li class="toc-level-3"><a href="#shimming">シミング</a></li><li class="toc-level-3"><a href="#rawRealFID">未処理の実部 FID</a></li><li class="toc-level-3"><a href="#rawImaginaryFID">未処理の虚部 FID</a></li><li class="toc-level-3"><a href="#processedRealFID">処理後の実部 FID</a></li><li class="toc-level-3"><a href="#processedImaginaryFID">処理後の虚部 FID</a></li><li class="toc-level-3"><a href="#spectrum">FID 処理およびフーリエ変換後のスペクトル</a></li><li class="toc-level-2"><a href="#chartInteraction">チャートの操作</a></li><li class="toc-level-2"><a href="#practicalExperiments">実践的な実験</a></li><li class="toc-level-2"><a href="#glossary">用語集</a></li><li class="toc-level-2"><a href="#advancedNotes">高度なメモ</a></li></ol></aside>
+      <article class="help-content"><p>このヘルプファイルでは、NMR FID学習ラボのワークスペースパネルと5つのチャートについて説明します。</p>
+<h2 id="quickOrientation">クイックガイド</h2>
+<p>NMR FID学習ラボは、時間領域の NMR シグナルが周波数領域のスペクトルにどのように変換されるかを示します。</p>
+<ul>
+<li>FID（自由誘導減衰）は、分光計が収集するシグナルです。</li>
+<li>FID は時間ベースです。時間とともに減衰する重なり合う振動シグナルで構成されています。</li>
+<li>実部と虚部の FID チャネルは、2つの直交検波チャネルです。</li>
+<li>処理により、フーリエ変換の前に FID が変更されます。</li>
+<li>フーリエ変換により、時間領域の FID が周波数領域のスペクトルに変換されます。</li>
+<li>位相補正により、変換された実部と虚部の周波数領域データが、表示されるスペクトルに結合されます。</li>
+<li>シミングは、磁場の不均一性が FID と最終的なスペクトルをどのように歪めるかを示します。</li>
+</ul>
+<p>広い画面では、ワークスペースにすべての5つのチャートの横にコントロールが表示されます。iPhone では、アプリがワークフローをコンパクトなパネルと選択可能なチャートビューにまとめるため、小さな画面でも同じ分析が使いやすくなっています。</p>
+<p>外部ディスプレイとミラーリング:</p>
+<ul>
+<li>対応する iPhone モデルでは、NMR FID学習ラボで外部ディスプレイ出力を使用できます。Apple TV にミラーリングする場合は、<strong>コントロールセンター 􀜊 &gt; スクリーンミラーリング 􀏧</strong> を開きます：コントロールセンター 􀜊 を開き、<strong>スクリーンミラーリング 􀏧</strong> をタップして、Apple TV を選択します。</li>
+<li>iPad では、外部ディスプレイを接続するか、<strong>コントロールセンター 􀜊 &gt; スクリーンミラーリング 􀏧</strong> を使用して AirPlay を行います。iPadOS が外部ディスプレイシーンを提供する場合、NMR FID学習ラボは接続されたディスプレイにチャートのみを表示できます。iPadOS がミラーリングを行う場合、ワークスペース全体がミラーリングされます。</li>
+</ul>
+<h2 id="suggestedWorkflow">推奨されるワークフロー</h2>
+<ol>
+<li><strong>ピークの設定</strong>から始めて、シミュレートするピークとオプションのJカップリングを選択します。</li>
+<li><strong>緩和と積分</strong>を使用して、両方のピークの T1/T2 値を比較し、緩和遅延（d1）を変更します。</li>
+<li>減衰、ピーク幅、およびモデルに基づく積分値の変化を、生の FID と最終スペクトルで観察します。</li>
+<li><strong>窓関数</strong>、<strong>FID ノイズ</strong>、<strong>FID の乱れ</strong>を使用して、現実的な取得および処理効果を適用します。</li>
+<li><strong>フーリエ変換</strong>を使用してゼロフィリングし、オプションで最初のポイントをスケーリングします。</li>
+<li><strong>位相補正</strong>を使用して周波数領域スペクトルを補正します。</li>
+<li><strong>シミング</strong>を使用して、磁場の不均一性がピーク形状にどのように影響するかを確認します。</li>
+<li>各チャートのリセットボタンを使用してそのチャートのズーム/パン範囲を復元するか、ワークスペースツールバーからすべてのプロットをリセットします。</li>
+</ol>
+<h2>パネル</h2>
+<h3 id="setupPeaks">ピークの設定</h3>
+<p>処理の前に、このパネルを使用してシミュレートされた FID を構築します。</p>
+<p><strong>1つ目のピーク位置</strong><br>1つ目の共鳴を有効にして位置を決めます。スライダーの範囲は <code>-0.50...0.50</code> です。ピークをスペクトルの中心から遠ざけると、FID の振動数が増加します。時間領域チャートでは、キャリア周波数から遠いピークほど速く振動します。</p>
+<p><strong>2つ目のピーク位置</strong><br>2つ目の共鳴を有効にして位置を決めます。スライダーの範囲は <code>-0.50...0.50</code> です。両方のピークを有効にすると、FID は両方の振動減衰の合計になります。</p>
+<p><strong>Jカップリング</strong></p>
+<p>2つのピーク間のJカップリング（J結合）をオンにします。スライダーの範囲は <code>0.00...50.00</code> です。スライダーを右に移動すると見かけの分裂が増加し、FID とスペクトルがより複雑になります。高い値では、2つのピークがより強く結合した AB 型パターンを形成します。</p>
+<p>確認ポイント:</p>
+<ul>
+<li><strong>未処理の実部 FID</strong> と <strong>未処理の虚部 FID</strong> は、ピーク位置とJカップリングに即座に反応します。</li>
+<li><strong>FID 処理およびフーリエ変換後のスペクトル</strong> は、対応するピーク位置とJカップリングパターンを示します。</li>
+</ul>
+<h3 id="relaxationIntegration">緩和と積分</h3>
+<p>このパネルでは、定量 NMR の中心的な教訓である <strong>d1 が短いと積分値が誤ることがある</strong> ことを示します。シミュレートされた2つのピークには、それぞれ独立した <code>0.5...5.0 s</code> の <strong>緩和時間（T1 = T2）</strong> スライダーがあります。初期値はピーク1が <code>1.0 s</code>、ピーク2が <code>3.0 s</code> です。</p>
+<p><strong>緩和遅延（d1）</strong> の範囲は <code>0...24 s</code> です。取得時間は <code>5.0 s</code> に固定されているため、繰り返し時間は次のようになります。</p>
+<p><code>TR = 取得時間 + d1</code></p>
+<p>固定された90°パルスの後、各ピークの定常状態での回復は <code>1 − exp(−TR/T1)</code> です。T1 が長いほど回復が遅くなります。この簡略化されたレッスンでは T1 と T2 が等しいため、ピークの緩和時間を長くすると FID の減衰が遅くなり、スペクトル線が狭くなります。</p>
+<p>初期設定では TR は <code>5.0 s</code> です。ピーク1は約 <code>0.993</code> まで回復しますが、ピーク2は約 <code>0.811</code> までです。そのため、化学的に等しい2つのシグナルが <code>1:1</code> ではなく約 <code>1.22:1</code> に見えます。<code>d1 = 10 s</code> では、TR は最長の T1 の5倍となり、比は期待値のおよそ1パーセント以内になります。5秒の取得窓は、既存の4,096サンプル点を維持しながら、目に見える FID の切り捨てを減らします。</p>
+<p>表示される積分値は、既知のシミュレーション成分であるピーク1とピーク2から計算されます。このモデルに基づく計算は、表示線が重なっている場合やJカップリングが有効な場合でも有効であり、結合したスペクトルの高さや幅から面積を推定するものではありません。孤立したローレンツ線では、面積を高さと半値全幅に関連付けられますが、重なった線や結合したマルチプレットにこの近似を使用することはできません。インポートした FID には既知の元成分がないため、この教材用の表示は利用できません。</p>
+<p>これは定常状態を説明するための教育用モデルであり、研究用の定量 NMR ではありません。実際のシグナルでは通常 T1 と T2 が異なり、結合スピンの緩和はここで使用する2つの成分包絡線より複雑になる場合があります。</p>
+<h3 id="apodization">窓関数</h3>
+<p>このパネルを使用して、フーリエ変換の前に FID に窓関数を掛けます。窓関数は、S/N比を向上させ、切り捨てによるアーティファクトを減らす、または感度と解像度をトレードオフすることができます。緑色の破線の窓関数カーブは、処理後の FID チャートにオーバーレイされます。</p>
+<p><strong>ラインブロードニング</strong><br>指数関数の乗算を有効にします。スライダーの範囲は <code>0.00...10.00</code> です。値が大きいほど、FID の後半の減衰が強くなります。これにより見かけの S/N比が向上し、切り捨てアーティファクトが減少することが多いですが、ピークが広がります。</p>
+<p><strong>サインベル</strong><br>サインベル窓を有効にします。スライダーの範囲は <code>0.00...2.00</code> です。サインベルによる重み付けは、FID の中間から後半を強調し、ゼロに向かってテーパーをかけます。これは切り捨ての振る舞いを改善するのに役立ちます。</p>
+<p><strong>サインベルの二乗</strong><br>二乗サインベル窓を有効にします。スライダーの範囲は <code>0.00...2.00</code> です。これはサインベルテーパーのより強いバージョンで、端に近い部分での重み付けがより急激になります。</p>
+<p><strong>ガウシアン</strong><br>ガウシアン乗算を有効にします。スライダーの範囲は <code>0.00...10.00</code> です。ガウシアンによる重み付けは釣鐘型の窓を適用し、特定のケースでは見かけの解像度を向上させることができますが、極端に設定しすぎるとピーク形状が変化したり、アーティファクトが発生したりする可能性があります。</p>
+<p>確認ポイント:</p>
+<ul>
+<li><strong>処理後の実部 FID</strong> と <strong>処理後の虚部 FID</strong> には、処理されたシグナルと緑色の窓関数カーブが表示されます。</li>
+<li>最終スペクトルは、ピークの幅、ピークの形状、S/N比のトレードオフを示します。</li>
+</ul>
+<h3 id="noiseFID">FID ノイズ</h3>
+<p>このパネルを使用して、現実的なランダムノイズを追加し、シグナルアベレージング（積算）を探索します。</p>
+<p><strong>FID にノイズを追加</strong><br>処理後の FID でノイズを有効にします。スライダーの範囲は <code>0.00...4.00</code> です。値が大きいほど、両方の FID チャネルにより多くのランダムな変動が追加されます。</p>
+<p><strong>積算回数</strong><br>シグナルアベレージングを制御します。スライダーの範囲は <code>1...16</code> 回です。積算回数を増やすとノイズに対するシグナルが増加しますが、改善度は積算回数の平方根に従います。実際には、S/N比を2倍にするには約4倍の積算回数が必要です。</p>
+<p><strong>スペクトルS/N比</strong> 最終スペクトルの最も高いピークを、自動選択された信号のないベースライン領域で測定したノイズと比較して表示します。信頼できる測定値がある場合、読み取り値はスペクトルの左上に表示されます。ノイズ、積算回数、アポダイゼーション、FID 変形、またはシミングのスライダーを動かしている間はリアルタイムで更新され、その他のスペクトル変更が確定した後にも再測定されます。ノイズがオフか、信頼できる測定値が得られない場合は非表示になります。</p>
+<p>確認ポイント:</p>
+<ul>
+<li>ノイズは、処理後の FID チャートで最も簡単に確認できます。</li>
+<li>最終スペクトルでは、ノイズはベースラインの粗さとして現れ、小さなピークの信頼性が低下します。</li>
+</ul>
+<h3 id="mangleFID">FID の乱れ</h3>
+<p>このパネルを使用して、スペクトルにアーティファクトを引き起こす一般的な取得またはレシーバーの問題を示します。</p>
+<p><strong>実部 FID を垂直にオフセット</strong><br>実部 FID チャネルに垂直オフセットを追加します。スライダーの範囲は <code>0.00...1.00</code> です。オフセットは、変換後にベースラインのアーティファクトを引き起こす可能性があります。</p>
+<p><strong>実部 FID を垂直にスケーリング</strong><br>実部 FID チャネルをスケーリングします。スライダーの範囲は <code>0.00...2.00</code> です。実部チャネルのみをスケーリングするとチャネルの不平衡をシミュレートし、位相補正だけでは修正できないスペクトルアーティファクトを引き起こす可能性があります。</p>
+<p><strong>最初のポイントを遅延</strong><br>最初のサンプリングポイントの前に小さな取得遅延をシミュレートします。これが主に影響するのは位相です。スライダーの範囲は <code>0.00...1.00</code> です。これは、取得された FID における小数点の遅延またはドウェル時間に関連する遅延のように振る舞います。</p>
+<p><strong>ゲインオーバーロード</strong><br>オーバーロードした FID 値をクリッピングします。スライダーの範囲は <code>0.00...1.00</code> です。値が大きいほど、クリッピングのしきい値が低くなります。現在の実装では、実部チャネルの最大絶対値から導出されたリミットを使用して、両方のチャネルをクリッピングします。</p>
+<p>確認ポイント:</p>
+<ul>
+<li>処理後の FID チャートは、直接的なダメージを示します。</li>
+<li>スペクトルは、チャネルの不平衡、オフセット、クリッピング、および遅延取得によって引き起こされたアーティファクトを示します。</li>
+</ul>
+<h3 id="fourierTransform">フーリエ変換</h3>
+<p>このパネルを使用して、時間領域から周波数領域への最終的な変換を制御します。</p>
+<p><strong>ベースラインとドリフトを補正</strong> インポートした Raw FID に対して、NMR Tutor は十分に減衰した複素 FID の末尾を慎重にセンタリングし、続いて符号に依存しない滑らかなスペクトルのベースラインをフィッティングしてゼロに移動します。Raw FID データは変更されず、確実でない補正はスキップされます。補正前の処理結果を表示するには、このオプションをオフにします。</p>
+<p><strong>検出されたデジタルフィルター遅延を使用</strong> Bruker および JEOL の FID には、受信機の遅延が含まれる場合があります。NMR Tutor は通常、処理前にこの遅延を自動補正し、Raw FID は変更しません。補正済みと記録されたファイルには再補正を行いません。補正を手動で調整するには、<strong>検出されたデジタルフィルター遅延を使用</strong>をオフにします。</p>
+<p><strong>ゼロフィリング</strong><br>有効にすると、アプリはフーリエ変換の前に FID に同数のゼロを追加します。これにより、周波数領域スペクトルでのデジタル補間が増加します。ゼロフィリングは新しい測定データを作成するわけではありませんが、より滑らかに見えるスペクトルを提供し、元のデータポイント間のピークの視覚的な位置決めを改善します。</p>
+<p><strong>最初のポイントをスケーリング</strong><br>有効にすると、最初の FID ポイントは変換前に <code>0.5</code> が掛けられます。これによりスペクトルのベースラインを下げることができます。</p>
+<p>確認ポイント:</p>
+<ul>
+<li>ゼロフィリングにより、変換スペクトルに使用されるポイント数が増加します。</li>
+<li>最初のポイントのスケーリングは、最終スペクトルのベースラインの動作に主に影響します。</li>
+</ul>
+<h3 id="phaseSpectrum">位相補正</h3>
+<p>このパネルを使用して、変換された実部と虚部の周波数領域データが、表示される実部スペクトルにどのように結合されるかを補正します。</p>
+<p><strong>ゼロ次</strong><br>スペクトル全体を同じ量だけ回転させます。スライダーの範囲は約 <code>-pi...pi</code> (<code>-3.14...3.14</code>) です。</p>
+<p><strong>1次</strong><br>スペクトル全体にわたって位相を線形に変化させます。スライダーの範囲は約 <code>-pi...pi</code> (<code>-3.14...3.14</code>) です。</p>
+<p><strong>ピボットポイント</strong></p>
+<p>1次位相の寄与がゼロになるポイントを設定します。スライダーの範囲はスペクトル全体の <code>0...100</code>% です。スペクトルチャート上の黄色い菱形のマーカーをドラッグしてピボットポイントを変更することもできます。一般的な教育戦略は、最も高いピークまたはスペクトルの右側にピボットポイントを設定することです。</p>
+<p>確認ポイント:</p>
+<ul>
+<li>位相が補正されると、スペクトルは吸収波形に近づき、分散成分が減少します。</li>
+<li>ゼロ次の変化は、スペクトル全体に広く影響するはずです。</li>
+<li>1次の変化は、ピボットポイントを中心にスペクトルを回転させるはずです。</li>
+</ul>
+<h3 id="shimming">シミング</h3>
+<p>このパネルを使用して、サンプル内の磁場の不均一性を示します。</p>
+<p><strong>シミングを有効にする</strong><br>シミュレーションのオン/オフを切り替えます。</p>
+<p><strong>Z1 〜 Z6</strong><br>NMR チューブに沿った垂直方向のシム項を調整します。各スライダーの範囲は <code>-1024...1024</code> です。これらは軸方向の <code>Z</code> シムのみです。横方向のシムはこのワークスペースでは計算されません。</p>
+<p><strong>ゼロにリセット</strong><br>すべてのシム項をゼロに戻します。</p>
+<p>確認ポイント:</p>
+<ul>
+<li>シムが悪いと FID が歪み、スペクトルに変形、広がり、または分裂したピークが発生します。</li>
+<li>最終スペクトルは通常、シムの品質を確認する最も明確な場所ですが、FID でも変調と減衰の変化を確認できます。</li>
+<li>実際の NMR の作業では、シムは通常、取得の前に手動または自動シミングプログラムによって調整されます。</li>
+</ul>
+<h2>チャート</h2>
+<h3 id="rawRealFID">未処理の実部 FID</h3>
+<p>このチャートは、アクティブなピークから生成された生の実部時間領域 FID を示します。これは、ノイズ、撹乱コントロール、窓関数、シミング、またはフーリエ変換の前の最初の直交検波チャネルです。</p>
+<p>これを使用して確認できます:</p>
+<ul>
+<li>ピーク位置が FID 周波数をどのように変えるか；</li>
+<li>指数減衰がエンベロープをどのように変えるか；</li>
+<li>Jカップリングが波形の複雑さをどのように変えるか；</li>
+<li>実部チャネルと虚部チャネルの違い。</li>
+</ul>
+<h3 id="rawImaginaryFID">未処理の虚部 FID</h3>
+<p>このチャートは、生の虚部時間領域 FID を示します。実部 FID と合わせて、直交検波を表します。</p>
+<p>これを使用して確認できます:</p>
+<ul>
+<li>処理前の2番目の検波チャネル；</li>
+<li>実部チャネルと虚部チャネル間の位相関係；</li>
+<li>スペクトルになる情報を両方のチャネルがどのように担っているか。</li>
+</ul>
+<h3 id="processedRealFID">処理後の実部 FID</h3>
+<p>このチャートは、処理フロー後の実部 FID を示します。アクティブなコントロールに応じて、積算回数に応じたスケーリング、シミング、実部チャネルのスケーリング、実部チャネルのオフセット、ノイズ、ゲインクリッピング、最初のポイントの遅延、最初のポイントのスケーリング、窓関数が含まれます。</p>
+<p>緑色の破線は窓関数です。窓関数がアクティブでない場合、平坦なままです。</p>
+<p>これを使用して確認できます:</p>
+<ul>
+<li>処理が変換前に実部時間領域データをどのように変えるか；</li>
+<li>オフセット、スケーリング、クリッピング、またはノイズが FID を破損していないか；</li>
+<li>窓関数が早期のポイントと遅延のポイントにどのように重み付けをするか。</li>
+</ul>
+<h3 id="processedImaginaryFID">処理後の虚部 FID</h3>
+<p>このチャートは、処理フロー後の虚部 FID を示します。処理後の実部チャートと同じ取得および窓関数操作を使用しますが、実部チャネルにのみ明示的に影響を与えるコントロールは、虚部チャネルを直接スケーリングまたはオフセットしません。</p>
+<p>これを使用して確認できます:</p>
+<ul>
+<li>ノイズ、ゲインクリッピング、シミング、遅延、窓関数が虚部チャネルにどのように影響するか；</li>
+<li>実部チャネルと虚部チャネルの不一致がスペクトルアーティファクトにどのようになるか。</li>
+</ul>
+<h3 id="spectrum">FID 処理およびフーリエ変換後のスペクトル</h3>
+<p>このチャートは、最終的な周波数領域スペクトルを示します。処理された実部および虚部 FID チャネルにフーリエ変換を適用し、実部スペクトルを表示するために位相補正を適用することで計算されます。</p>
+<p>処理済みのJCAMP-DXスペクトルを開いた場合、実部の値が直接表示されます。FIDを作り出すための逆フーリエ変換は行いません。すでに処理済みのため、窓関数、フーリエ変換、および位相補正のコントロールは非表示になります。インポートした虚部成分はデータセットに保持されますが、表示はされません。</p>
+<p>黄色い菱形は位相補正のピボットポイントを示します。水平にドラッグしてピボットポイントを変更します。</p>
+<p>これを使用して確認できます:</p>
+<ul>
+<li>ピークの位置と幅；</li>
+<li>Jカップリングパターン；</li>
+<li>S/N比の変化；</li>
+<li>切り捨てと窓関数の効果；</li>
+<li>最初のポイントのスケーリングまたは FID オフセットによるベースラインへの影響；</li>
+<li>ゲインオーバーロード、遅延取得、チャネルの不平衡、不適切なシム調整によるアーティファクト；</li>
+<li>ゼロ次および1次の位相補正。</li>
+</ul>
+<h2 id="chartInteraction">チャートの操作</h2>
+<p>各チャートは以下をサポートしています:</p>
+<ul>
+<li>プロットエリア内のドラッグによるパン；</li>
+<li>プラットフォームがサポートする場合のピンチズーム；</li>
+<li>そのチャート個別のスケールリセットボタン；</li>
+<li>利用可能な場合のチャートオーディオ再生；</li>
+<li>表示可能なデータ範囲をまとめたアクセシビリティラベル。</li>
+</ul>
+<p>最終スペクトルでは、黄色いピボットポイントマーカーのドラッグもサポートしています。</p>
+<p>スペクトルヘッダーの拡大ボタンでスペクトルのみのワークスペースを開き、閉じるボタンで元に戻ります。シミュレーションデータではオーバーレイからすべてのコントロールパネルを利用でき、Bruker、Varian、およびJEOL JDFのFIDではアポダイゼーション、フーリエ変換、位相スペクトルの各パネルを利用できます。ppmスケールは概算で、化学シフトの参照補正は行いません。記録されたスペクトル幅と観測周波数を使用し、右端を0 ppmとします。</p>
+<h2 id="practicalExperiments">実践的な実験</h2>
+<h3>ピーク幅と減衰</h3>
+<ol>
+<li>1つのピークをオンにします。</li>
+<li><strong>緩和と積分</strong>で、そのピークの <strong>緩和時間（T1 = T2）</strong> を短くしたり長くしたりします。</li>
+<li>FID の長さと最終的なピーク幅を比較します。</li>
+</ol>
+<p>短い FID は広いピークを生成します。長い FID はよりシャープなピークを生成します。</p>
+<h3>ゼロフィリング</h3>
+<ol>
+<li><strong>ゼロフィリング</strong> をオフにします。</li>
+<li>最終スペクトルのデータポイントの間隔を観察します。</li>
+<li><strong>ゼロフィリング</strong> をオンにします。</li>
+</ol>
+<p>スペクトルの補間がより滑らかになりますが、基礎となる測定情報は増加していません。</p>
+<h3>シグナルアベレージング</h3>
+<ol>
+<li><strong>FID にノイズを追加</strong> を有効にします。</li>
+<li>ノイズレベルを上げます。</li>
+<li><strong>積算回数</strong> を増やします。</li>
+</ol>
+<p>ノイズは積算回数に対してゆっくりとしか減少しないため、S/N比は積算回数の平方根に従って向上します。</p>
+<h3>窓関数のトレードオフ</h3>
+<ol>
+<li><strong>ラインブロードニング</strong> を有効にします。</li>
+<li>スライダー値を増やします。</li>
+<li>処理後の FID が短くなり、最終スペクトルが広がるのを観察します。</li>
+</ol>
+<p>ラインブロードニングは S/N比を向上させ、切り捨てアーティファクトを減らすことができますが、解像度を犠牲にします。</p>
+<h3>位相補正</h3>
+<ol>
+<li>最終スペクトルを使用します。</li>
+<li>黄色いピボットポイントマーカーをピークまたはスペクトルの右側にドラッグします。</li>
+<li>表示されたピークが吸収波形になるまで、<strong>ゼロ次</strong> と <strong>1次</strong> を調整します。</li>
+</ol>
+<h3>シミング</h3>
+<ol>
+<li><strong>シミング</strong> を有効にします。</li>
+<li>1回に1つ、<code>Z</code> シムを移動します。</li>
+<li>最終スペクトルの歪みを観察します。</li>
+<li><strong>ゼロにリセット</strong> を使用して理想的な磁場に戻します。</li>
+</ol>
+<h2 id="glossary">用語集</h2>
+<p><strong>窓関数 (アポダイゼーション)</strong><br>フーリエ変換の前に FID に適用される数学的な窓。</p>
+<p><strong>FID</strong><br>自由誘導減衰。NMR 実験で収集される時間領域シグナル。</p>
+<p><strong>フーリエ変換</strong><br>時間領域の FID を周波数領域のスペクトルに変換する操作。</p>
+<p><strong>ラインブロードニング</strong><br>FID を減衰させ、ピークを広げる指数関数の窓関数。</p>
+<p><strong>位相補正</strong><br>変換された実部データと虚部データを組み合わせて、ピークを目的の吸収波形にするプロセス。</p>
+<p><strong>直交検波</strong><br>実部チャネルと虚部チャネルを使用した検出。</p>
+<p><strong>シミング</strong><br>サンプル内の磁場が均一になるように磁場補正コイルを調整すること。</p>
+<p><strong>ゼロフィリング</strong><br>スペクトル内のデジタル補間を改善するために、フーリエ変換の前にゼロ値のポイントを FID の末尾に追加すること。</p>
+<h2 id="advancedNotes">高度なメモ</h2>
+<p>これらの詳細は技術的なレビューに役立ちますが、ほとんどのユーザーに最初に示す説明としては適切ではありません。</p>
+<ol>
+<li><strong>Jカップリング</strong>スライダーは <code>0...50</code> と表示されます。内部的には、シミュレーターはJカップリングを適用する前に表示されたスライダー値を <code>50</code> で割るため、内部のJカップリング値の範囲は <code>0.0...1.0</code> になります。</li>
+<li>このヘルプでは、位相に関する標準的な NMR 用語を使用しています。ゼロ次位相は一定の回転、1次位相は線形の位相項、ピボットポイントは1次位相の寄与がゼロになる位置です。</li>
+</ol></article>
+    </div>
+    </main>
+  <footer class="site-footer">
+    <p>NMR FID学習ラボのサポートと資料 · <a href="mailto:utchemnmr@gmail.com">utchemnmr@gmail.com</a></p>
+    <details class="language-menu">
+      <summary>言語</summary>
+      <div class="language-links"><a href="/nmrtutor/en/help/" hreflang="en" lang="en">English</a>
+<a href="/nmrtutor/de/help/" hreflang="de" lang="de">Deutsch</a>
+<a href="/nmrtutor/es/help/" hreflang="es" lang="es">Español</a>
+<a href="/nmrtutor/es-419/help/" hreflang="es-419" lang="es-419">Español (Latinoamérica)</a>
+<a href="/nmrtutor/fr/help/" hreflang="fr" lang="fr">Français</a>
+<a href="/nmrtutor/ja/help/" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+<a href="/nmrtutor/ko/help/" hreflang="ko" lang="ko">한국어</a>
+<a href="/nmrtutor/pt-BR/help/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="/nmrtutor/zh-Hans/help/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="/nmrtutor/zh-Hant/help/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></div>
+    </details>
+  </footer>
+</body>
+</html>

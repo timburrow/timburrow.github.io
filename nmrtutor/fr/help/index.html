@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ce guide est généré à partir de la même source d’aide localisée que celle incluse dans l’app.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Aide de Laboratoire RMN FID · Laboratoire RMN FID</title>
+  <link rel="canonical" href="https://timburrow.github.io/nmrtutor/fr/help/">
+  <link rel="alternate" hreflang="en" href="https://timburrow.github.io/nmrtutor/en/help/">
+<link rel="alternate" hreflang="de" href="https://timburrow.github.io/nmrtutor/de/help/">
+<link rel="alternate" hreflang="es" href="https://timburrow.github.io/nmrtutor/es/help/">
+<link rel="alternate" hreflang="es-419" href="https://timburrow.github.io/nmrtutor/es-419/help/">
+<link rel="alternate" hreflang="fr" href="https://timburrow.github.io/nmrtutor/fr/help/">
+<link rel="alternate" hreflang="ja" href="https://timburrow.github.io/nmrtutor/ja/help/">
+<link rel="alternate" hreflang="ko" href="https://timburrow.github.io/nmrtutor/ko/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://timburrow.github.io/nmrtutor/pt-BR/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://timburrow.github.io/nmrtutor/zh-Hans/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://timburrow.github.io/nmrtutor/zh-Hant/help/">
+<link rel="alternate" hreflang="x-default" href="https://timburrow.github.io/nmrtutor/en/help/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aide de Laboratoire RMN FID">
+  <meta property="og:description" content="Ce guide est généré à partir de la même source d’aide localisée que celle incluse dans l’app.">
+  <meta property="og:url" content="https://timburrow.github.io/nmrtutor/fr/help/">
+  <meta property="og:image" content="https://timburrow.github.io/nmrtutor/assets/ipad.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/nmrtutor/assets/app-icon.png">
+  <link rel="stylesheet" href="/nmrtutor/assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="site-header">
+    <a class="brand" href="/nmrtutor/fr/">
+      <img src="/nmrtutor/assets/app-icon.png" width="44" height="44" alt="">
+      <span>Laboratoire RMN FID</span>
+    </a>
+    <nav class="primary-nav" aria-label="Laboratoire RMN FID"><a href="/nmrtutor/fr/">Présentation</a><a href="/nmrtutor/fr/help/" aria-current="page">Aide</a><a href="/nmrtutor/fr/support/">Assistance</a><a href="/nmrtutor/fr/privacy/">Confidentialité</a></nav>
+  </header>
+  <main id="main">
+    <section class="page-intro">
+      <p class="eyebrow">Laboratoire RMN FID</p>
+      <h1>Aide de Laboratoire RMN FID</h1>
+      <p class="lede">Ce guide est généré à partir de la même source d’aide localisée que celle incluse dans l’app.</p>
+    </section>
+    <div class="help-layout">
+      <aside class="toc"><h2>Sujets de ce guide</h2><ol><li class="toc-level-2"><a href="#quickOrientation">Orientation rapide</a></li><li class="toc-level-2"><a href="#suggestedWorkflow">Flux de travail conseillé</a></li><li class="toc-level-3"><a href="#setupPeaks">Configuration des pics</a></li><li class="toc-level-3"><a href="#relaxationIntegration">Relaxation et intégration</a></li><li class="toc-level-3"><a href="#apodization">Apodisation</a></li><li class="toc-level-3"><a href="#noiseFID">Bruit FID</a></li><li class="toc-level-3"><a href="#mangleFID">Altérer le FID</a></li><li class="toc-level-3"><a href="#fourierTransform">Transformée de Fourier</a></li><li class="toc-level-3"><a href="#phaseSpectrum">Phasage du spectre</a></li><li class="toc-level-3"><a href="#shimming">Shimming</a></li><li class="toc-level-3"><a href="#rawRealFID">FID réel sans traitement</a></li><li class="toc-level-3"><a href="#rawImaginaryFID">FID imaginaire sans traitement</a></li><li class="toc-level-3"><a href="#processedRealFID">FID réel après traitement</a></li><li class="toc-level-3"><a href="#processedImaginaryFID">FID imaginaire après traitement</a></li><li class="toc-level-3"><a href="#spectrum">Spectre après traitement et transformation de Fourier du FID</a></li><li class="toc-level-2"><a href="#chartInteraction">Interaction avec les graphes</a></li><li class="toc-level-2"><a href="#practicalExperiments">Expériences pratiques</a></li><li class="toc-level-2"><a href="#glossary">Glossaire</a></li><li class="toc-level-2"><a href="#advancedNotes">Notes avancées</a></li></ol></aside>
+      <article class="help-content"><p>Cette aide décrit les panneaux de l’espace de travail et les cinq surfaces graphiques de Laboratoire RMN FID.</p>
+<h2 id="quickOrientation">Orientation rapide</h2>
+<p>Laboratoire RMN FID montre comment un signal RMN dans le domaine temporel devient un spectre dans le domaine fréquentiel.</p>
+<ul>
+<li>Le FID, ou décroissance d&#x27;induction libre, est le signal collecté par le spectromètre.</li>
+<li>Le FID est temporel. Il est constitué de signaux oscillants superposés qui décroissent avec le temps.</li>
+<li>Les canaux FID réel et imaginaire sont les deux canaux de détection en quadrature.</li>
+<li>Le traitement modifie le FID avant la transformation de Fourier.</li>
+<li>La transformation de Fourier convertit le FID du domaine temporel en spectre du domaine fréquentiel.</li>
+<li>La correction de phase combine les données réelles et imaginaires transformées dans le domaine fréquentiel dans le spectre affiché.</li>
+<li>Le shimming montre comment l&#x27;inhomogénéité du champ magnétique déforme le FID et le spectre final.</li>
+</ul>
+<p>Sur les écrans larges, l&#x27;espace de travail affiche les commandes à côté des cinq graphiques. Sur iPhone, l&#x27;application peut concentrer le flux de travail sur des panneaux compacts et des vues graphiques sélectionnables afin que la même analyse reste utilisable sur un écran plus petit.</p>
+<p>Écran externe et recopie vidéo:</p>
+<ul>
+<li>Sur les modèles d&#x27;iPhone compatibles, Laboratoire RMN FID peut utiliser une sortie vers écran externe. Pour recopier vers une Apple TV, ouvrez <strong>Centre de contrôle 􀜊 &gt; Recopie de l’écran 􀏧</strong>: ouvrez le Centre de contrôle 􀜊, touchez <strong>Recopie de l’écran 􀏧</strong>, puis choisissez l’Apple TV.</li>
+<li>Sur iPad, connectez un écran externe ou utilisez <strong>Centre de contrôle 􀜊 &gt; Recopie de l’écran 􀏧</strong> pour AirPlay. Lorsque iPadOS fournit une scène d’écran externe, Laboratoire RMN FID peut afficher uniquement les graphiques sur l’écran connecté; lorsque iPadOS recopie l’écran, tout l’espace de travail est recopié.</li>
+</ul>
+<h2 id="suggestedWorkflow">Flux de travail conseillé</h2>
+<ol>
+<li>Commencez par <strong>Configurer les pics</strong> pour choisir les pics simulés et le couplage facultatif.</li>
+<li>Utilisez <strong>Relaxation et intégration</strong> pour comparer les valeurs T1/T2 des deux pics et modifier le délai de relaxation (d1).</li>
+<li>Observez le FID brut et le spectre final pendant que la décroissance, la largeur des pics et les intégrales calculées à partir du modèle changent.</li>
+<li>Utilisez <strong>Apodisation</strong>, <strong>Bruit FID</strong> et <strong>Perturber le FID</strong> pour appliquer des effets d&#x27;acquisition et de traitement réalistes.</li>
+<li>Utilisez <strong>Transformation de Fourier</strong> pour remplir à zéro et éventuellement mettre à l&#x27;échelle le premier point.</li>
+<li>Utilisez <strong>Phasage du spectre</strong> pour corriger le spectre du domaine fréquentiel.</li>
+<li>Utilisez <strong>Shimming</strong> pour voir comment l&#x27;inhomogénéité du champ modifie la forme du pic.</li>
+<li>Utilisez le bouton de réinitialisation de chaque graphique pour restaurer la plage de zoom/panoramique de ce graphique, ou réinitialisez tous les tracés à partir de la barre d&#x27;outils de l&#x27;espace de travail.</li>
+</ol>
+<h2>Panneaux</h2>
+<h3 id="setupPeaks">Configuration des pics</h3>
+<p>Utilisez ce panneau pour créer le FID simulé avant le traitement.</p>
+<p><strong>Première position de pic</strong><br>Permet et positionne la première résonance. La plage du curseur est <code>-0.50...0.50</code>. L&#x27;éloignement d&#x27;un pic du centre du spectre augmente la fréquence d&#x27;oscillation dans le FID. Les pics plus éloignés de la fréquence porteuse oscillent plus rapidement dans les graphiques du domaine temporel.</p>
+<p><strong>Deuxième position du pic</strong><br>Active et positionne la deuxième résonance. La plage du curseur est <code>-0.50...0.50</code>. Avec les deux pics activés, le FID est la somme des deux décroissances oscillantes.</p>
+<p><strong>Couplage</strong><br>Active le couplage entre les deux pics. La plage du curseur est <code>0.00...50.00</code>. Déplacer le curseur plus haut augmente le dédoublement apparent et rend le FID et le spectre plus complexes. À des valeurs plus élevées, les deux pics forment un motif de type AB couplé plus fort.</p>
+<p>Que regarder :</p>
+<ul>
+<li><strong>Le FID réel sans traitement</strong> et le <strong>FID imaginaire sans traitement</strong> répondent immédiatement à la position du pic et au couplage.</li>
+<li><strong>Le spectre après le traitement de FID et la transformation de Fourier</strong> montre les positions des pics et le modèle de couplage correspondants.</li>
+</ul>
+<h3 id="relaxationIntegration">Relaxation et intégration</h3>
+<p>Ce panneau illustre une notion centrale de la RMN quantitative : <strong>un d1 trop court peut produire des intégrales erronées</strong>. Les deux pics simulés possèdent chacun un curseur indépendant de <strong>temps de relaxation (T1 = T2)</strong> allant de <code>0.5...5.0 s</code>. Le pic 1 commence à <code>1.0 s</code> et le pic 2 à <code>3.0 s</code>.</p>
+<p>Le <strong>délai de relaxation (d1)</strong> va de <code>0...24 s</code>. Le temps d’acquisition est fixé à <code>5.0 s</code>; le temps de répétition est donc :</p>
+<p><code>TR = temps d’acquisition + d1</code></p>
+<p>Après une impulsion fixe de 90°, la récupération à l’état stationnaire de chaque pic vaut <code>1 − exp(−TR/T1)</code>. Un T1 plus long récupère plus lentement. Dans cette leçon simplifiée, T1 est également égal à T2 : augmenter le temps de relaxation d’un pic ralentit donc la décroissance de son FID et rétrécit sa raie spectrale.</p>
+<p>Avec les valeurs par défaut, TR vaut <code>5.0 s</code>. Le pic 1 récupère jusqu’à environ <code>0.993</code>, tandis que le pic 2 atteint environ <code>0.811</code>. Deux signaux chimiquement égaux apparaissent donc dans un rapport proche de <code>1.22:1</code> au lieu de <code>1:1</code>. Avec <code>d1 = 10 s</code>, TR vaut cinq fois le T1 le plus long et le rapport se trouve à environ un pour cent de la valeur attendue. La fenêtre d’acquisition de 5 secondes réduit la troncature visible du FID tout en conservant les 4 096 points d’échantillonnage existants.</p>
+<p>Les intégrales affichées sont calculées à partir des composantes simulées connues des pics 1 et 2. Ce calcul fondé sur le modèle reste valide lorsque les raies affichées se chevauchent ou que le couplage est activé; il n’estime pas l’aire à partir de la hauteur ou de la largeur du spectre combiné. Pour une lorentzienne isolée, l’aire peut être reliée à la hauteur et à la largeur totale à mi-hauteur, mais ce raccourci n’est pas fiable pour des raies qui se chevauchent ou pour un multiplet couplé. Les FID importés ne possèdent pas de composantes sources connues; cette indication pédagogique n’est donc pas disponible pour eux.</p>
+<p>Il s’agit d’un modèle pédagogique de l’état stationnaire, et non d’une méthode de qRMN adaptée à la recherche. Les signaux réels ont généralement des valeurs T1 et T2 différentes, et la relaxation des spins couplés peut être plus complexe que les deux enveloppes de composantes utilisées ici.</p>
+<h3 id="apodization">Apodisation</h3>
+<p>Utilisez ce panneau pour multiplier le FID par des fonctions de fenêtrage avant la transformation de Fourier. L’apodisation peut améliorer le rapport signal/bruit, réduire les artefacts de troncature ou faire un compromis entre sensibilité et résolution. La courbe d’apodisation en pointillés verts est superposée aux graphiques du FID traité.</p>
+<p><strong>Élargissement de raie</strong><br>Active la multiplication exponentielle. La plage du curseur est  0.00...10.00 . Des valeurs plus élevées atténuent davantage la fin du FID. Cela améliore souvent le rapport signal/bruit apparent et réduit les artefacts de troncature, mais élargit les pics.</p>
+<p><strong>Fenêtre sinusoïdale</strong><br>Active une fenêtre de pondération sinusoïdale. La plage du curseur est  0.00...2.00 . Cette pondération met l’accent sur la partie médiane ou finale du FID et s’atténue vers zéro, ce qui peut améliorer le comportement vis-à-vis de la troncature.</p>
+<p><strong>Fenêtre sinusoïdale au carré</strong><br>Active une fenêtre de pondération sinusoïdale au carré. La plage du curseur est  0.00...2.00 . Il s’agit d’une version plus forte de la fenêtre sinusoïdale, avec une pondération plus marquée près des extrémités.</p>
+<p><strong>Gaussienne</strong><br>Active une multiplication gaussienne. La plage du curseur est  0.00...10.00 . Cette pondération applique une fenêtre en forme de cloche qui peut améliorer la résolution apparente dans certains cas, mais elle peut aussi modifier la forme des raies ou introduire des artefacts si elle est poussée trop loin.</p>
+<p>Que regarder :</p>
+<ul>
+<li><strong>FID réel après traitement</strong> et <strong>FID imaginaire après traitement</strong> affichent à la fois le signal traité et la courbe d&#x27;apodisation verte.</li>
+<li>Le spectre final montre le compromis entre la largeur du pic, la forme du pic et le rapport signal/bruit.</li>
+</ul>
+<h3 id="noiseFID">Bruit FID</h3>
+<p>Utilisez ce panneau pour ajouter un bruit aléatoire réaliste et explorer la moyenne du signal.</p>
+<p><strong>Ajouter du bruit à FID</strong><br>Active le bruit dans le FID traité. La plage du curseur est <code>0.00...4.00</code>. Des valeurs plus grandes ajoutent plus de variation aléatoire aux deux canaux FID.</p>
+<p><strong>Nombre d’acquisitions</strong><br>Contrôle le moyennage du signal. La plage du curseur est de <code>1...16</code> acquisitions. L’augmentation du nombre d’acquisitions augmente le signal par rapport au bruit, mais l’amélioration suit la racine carrée de ce nombre. En pratique, doubler le rapport signal/bruit nécessite environ quatre fois plus d’acquisitions.</p>
+<p><strong>RSB du spectre</strong> Indique le pic le plus élevé du spectre final par rapport au bruit mesuré dans une zone de ligne de base dégagée sélectionnée automatiquement. La valeur apparaît en haut à gauche du spectre lorsqu’une mesure fiable est disponible. Elle est actualisée en direct pendant le déplacement des curseurs Bruit, Nombre d’acquisitions, Apodisation, Altération du FID ou Shimming, puis remesurée après la stabilisation des autres changements du spectre ; elle est masquée si le bruit est désactivé ou si aucune mesure fiable n’est disponible.</p>
+<p>Que regarder :</p>
+<ul>
+<li>Le bruit est plus facile à voir dans les graphiques de FID traités.</li>
+<li>Dans le spectre final, le bruit apparaît comme une rugosité de base et une confiance réduite dans les petits pics.</li>
+</ul>
+<h3 id="mangleFID">Altérer le FID</h3>
+<p>Utilisez ce panneau pour démontrer les problèmes courants d’acquisition ou de récepteur qui produisent des artefacts dans le spectre.</p>
+<p><strong>Décaler verticalement le FID réel</strong><br>Ajoute un décalage vertical au canal FID réel. La plage du curseur est <code>0.00...1.00</code>. Un décalage peut créer des artefacts de ligne de base après transformation.</p>
+<p><strong>Mettre à l’échelle verticalement le FID réel</strong><br>Met à l&#x27;échelle le canal FID réel. La plage du curseur est <code>0.00...2.00</code>. La mise à l&#x27;échelle uniquement du canal réel simule un déséquilibre de canal et peut créer des artefacts spectraux que la mise en phase seule ne peut pas corriger.</p>
+<p><strong>Retarder le premier point</strong><br>Simule un petit délai d&#x27;acquisition avant le premier point échantillonné, qui affecte principalement la phase. La plage du curseur est <code>0.00...1.00</code>. Cela se comporte comme un délai fractionnaire ou lié au temps de séjour dans le FID acquis.</p>
+<p><strong>Saturation du récepteur</strong><br>Écrête les valeurs FID surchargées. La plage du curseur est <code>0.00...1.00</code>. Des valeurs plus élevées réduisent le seuil d&#x27;écrêtage. L&#x27;implémentation actuelle écrête les deux canaux en utilisant une limite dérivée de la valeur absolue maximale du canal réel.</p>
+<p>Que regarder :</p>
+<ul>
+<li>Les graphiques de FID traités montrent les dommages directs.</li>
+<li>Le spectre montre les artefacts causés par le déséquilibre des canaux, le décalage du canal réel, l’écrêtage et l’acquisition retardée.</li>
+</ul>
+<h3 id="fourierTransform">Transformée de Fourier</h3>
+<p>Utilisez ce panneau pour contrôler la conversion finale du domaine temporel au domaine fréquentiel.</p>
+<p><strong>Corriger la ligne de base et la dérive</strong> Pour un FID RMN brut importé, NMR Tutor centre prudemment la fin d&#x27;un FID complexe ayant suffisamment décru, puis ajuste une ligne de base spectrale lisse indépendante du signe et la ramène à zéro. Les données du FID brut restent inchangées et les corrections incertaines sont ignorées. Désactivez cette option pour afficher le traitement sans correction.</p>
+<p><strong>Utiliser le retard détecté du filtre numérique</strong> Certains FID Bruker et JEOL présentent un retard du récepteur. En règle générale, NMR Tutor le corrige automatiquement avant le traitement, sans modifier le FID brut. Les fichiers indiqués comme déjà corrigés restent inchangés. Désactivez <strong>Utiliser le retard détecté du filtre numérique</strong> pour régler manuellement la correction.</p>
+<p><strong>Remplissage de zéros</strong><br>Lorsqu&#x27;elle est activée, l&#x27;application ajoute un nombre égal de zéros au FID avant la transformation de Fourier. Cela augmente l&#x27;interpolation numérique dans le spectre du domaine fréquentiel. Le remplissage zéro ne crée pas de nouvelles données mesurées, mais il donne un spectre plus lisse et un meilleur placement visuel des pics entre les points de données d&#x27;origine.</p>
+<p><strong>Mettre à l’échelle le premier point</strong><br>Lorsqu&#x27;il est activé, le premier point FID est multiplié par <code>0.5</code> avant transformation. Cela peut abaisser la ligne de base du spectre.</p>
+<p>Que regarder :</p>
+<ul>
+<li>Le remplissage zéro augmente le nombre de points utilisés pour le spectre transformé.</li>
+<li>Le premier point de l&#x27;échelle affecte principalement le comportement de base dans le spectre final.</li>
+</ul>
+<h3 id="phaseSpectrum">Phasage du spectre</h3>
+<p>Utilisez ce panneau pour corriger la façon dont les données transformées du domaine fréquentiel réel et imaginaire se combinent dans le spectre réel affiché.</p>
+<p><strong>Phase d’ordre zéro</strong><br>Fait pivoter tout le spectre de la même quantité. La plage du curseur est d’environ <code>-pi...pi</code> (<code>-3.14...3.14</code>).</p>
+<p><strong>Phase du premier ordre</strong><br>Change de phase linéairement sur tout le spectre. La plage du curseur est d’environ <code>-pi...pi</code> (<code>-3.14...3.14</code>).</p>
+<p><strong>Point pivot</strong><br>Définit le point où la contribution de la phase de premier ordre est nulle. La plage du curseur est de <code>0...100</code> pour cent sur tout le spectre. Le pivot peut également être modifié en faisant glisser le marqueur en forme de losange jaune sur le graphique du spectre. Une stratégie pédagogique courante consiste à pivoter sur le sommet le plus haut ou sur le côté droit du spectre.</p>
+<p>Que regarder :</p>
+<ul>
+<li>Le spectre devrait devenir plus absorbant et moins dispersif à mesure que la phase est corrigée.</li>
+<li>Les changements d&#x27;ordre zéro devraient affecter le spectre dans son ensemble.</li>
+<li>Les changements de premier ordre doivent faire pivoter le spectre autour du point pivot.</li>
+</ul>
+<h3 id="shimming">Shimming</h3>
+<p>Utilisez ce panneau pour démontrer l’inhomogénéité du champ magnétique à travers l’échantillon.</p>
+<p><strong>Activer le shimming</strong><br>Active et désactive la simulation de shimming.</p>
+<p><strong>Z1 à Z6</strong><br>Ajustez les termes de shim axiaux le long du tube de RMN. Chaque plage de curseur est <code>-1024...1024</code>. Seuls les shims axiaux <code>Z</code> sont simulés ; les shims transversaux ne sont pas calculés dans cet espace de travail.</p>
+<p><strong>Réinitialiser les zéros</strong><br>Remet tous les termes de shim à zéro.</p>
+<p>Que regarder :</p>
+<ul>
+<li>De mauvais réglages de shim déforment le FID et produisent des pics déformés, élargis ou dédoublés dans le spectre.</li>
+<li>Le spectre final est généralement l’endroit le plus clair pour évaluer la qualité du shimming, mais le FID peut également montrer les changements de modulation et de décroissance.</li>
+<li>Dans les expériences réelles de RMN, les shims sont généralement réglés avant l’acquisition, soit manuellement, soit par shimming automatique.</li>
+</ul>
+<h2>Graphiques</h2>
+<h3 id="rawRealFID">FID réel sans traitement</h3>
+<p>Ce graphique montre le FID réel brut dans le domaine temporel généré à partir des pics actifs. Il s&#x27;agit du premier canal en quadrature avant le bruit, les contrôles Perturber le FID, l&#x27;apodisation, le shimming ou la transformation de Fourier.</p>
+<p>Utilisez-le pour voir :</p>
+<ul>
+<li>comment la position du pic change la fréquence FID ;</li>
+<li>comment la décroissance exponentielle modifie l&#x27;enveloppe ;</li>
+<li>comment le couplage modifie la complexité de la forme d&#x27;onde ;</li>
+<li>en quoi le canal réel diffère du canal imaginaire.</li>
+</ul>
+<h3 id="rawImaginaryFID">FID imaginaire sans traitement</h3>
+<p>Ce graphique montre le FID imaginaire brut dans le domaine temporel. Avec le FID réel, il représente la détection en quadrature.</p>
+<p>Utilisez-le pour voir :</p>
+<ul>
+<li>la deuxième voie de détection avant traitement ;</li>
+<li>relation de phase entre canaux réels et imaginaires ;</li>
+<li>comment les deux canaux transportent des informations qui deviennent le spectre.</li>
+</ul>
+<h3 id="processedRealFID">FID réel après traitement</h3>
+<p>Ce graphique montre le FID réel après la chaîne de traitement. Selon les commandes actives, il peut inclure la mise à l’échelle liée au nombre d’acquisitions, le shimming, la mise à l’échelle du canal réel, le décalage du canal réel, le bruit, l’écrêtage dû à la surcharge de gain, le retard du premier point, la mise à l’échelle du premier point et l’apodisation.</p>
+<p>La ligne verte pointillée est la fonction d&#x27;apodisation. Si aucune apodisation n&#x27;est active, elle reste plate.</p>
+<p>Utilisez-le pour voir :</p>
+<ul>
+<li>comment le traitement modifie les données temporelles réelles avant la transformation ;</li>
+<li>si le décalage, la mise à l’échelle, l’écrêtage ou le bruit ont altéré le FID ;</li>
+<li>comment l&#x27;apodisation pondère les points précoces et tardifs.</li>
+</ul>
+<h3 id="processedImaginaryFID">FID imaginaire après traitement</h3>
+<p>Ce graphique montre le FID imaginaire après la chaîne de traitement. Il utilise les mêmes opérations d’acquisition et d’apodisation que le graphe du FID réel traité, sauf que les commandes qui affectent explicitement le seul canal réel ne mettent pas directement à l’échelle et ne décalent pas le canal imaginaire.</p>
+<p>Utilisez-le pour voir :</p>
+<ul>
+<li>comment le bruit, l&#x27;écrêtage du gain, le shimming, le retard et l&#x27;apodisation affectent le canal imaginaire ;</li>
+<li>comment les disparités entre canaux réels et imaginaires peuvent devenir des artefacts spectraux.</li>
+</ul>
+<h3 id="spectrum">Spectre après traitement et transformation de Fourier du FID</h3>
+<p>Ce graphique montre le spectre final dans le domaine fréquentiel. Il est calculé en appliquant la transformation de Fourier aux canaux réel et imaginaire du FID traité, puis en appliquant une correction de phase pour afficher le spectre réel.</p>
+<p>Lorsque vous ouvrez un spectre JCAMP-DX traité, ses valeurs réelles sont affichées directement. L’app n’applique pas de transformation de Fourier inverse pour créer artificiellement une FID. Les commandes d’apodisation, de transformation de Fourier et de phase sont masquées, car ces étapes ont déjà été effectuées. Une composante imaginaire importée est conservée dans le jeu de données, mais n’est pas affichée.</p>
+<p>Le losange jaune marque le point pivot de phase. Faites-le glisser horizontalement pour changer le pivot.</p>
+<p>Utilisez-le pour voir :</p>
+<ul>
+<li>position et largeur du pic ;</li>
+<li>les modèles de couplage ;</li>
+<li>les changements signal/bruit ;</li>
+<li>effets de troncature et d&#x27;apodisation ;</li>
+<li>effets de ligne de base dus à la mise à l’échelle du premier point ou au décalage du FID ;</li>
+<li>artefacts dus à une surcharge de gain, à une acquisition retardée, à un déséquilibre des canaux et à de mauvais réglages de shim ;</li>
+<li>correction de phase d&#x27;ordre zéro et de premier ordre.</li>
+</ul>
+<h2 id="chartInteraction">Interaction avec les graphes</h2>
+<p>Chaque graphique prend en charge :</p>
+<ul>
+<li>panoramique par glisser-déposer dans la zone de tracé ;</li>
+<li>pincer le zoom là où la plateforme le prend en charge ;</li>
+<li>un bouton de réinitialisation de l&#x27;échelle pour ce graphique individuel ;</li>
+<li>lecture audio graphique si disponible ;</li>
+<li>des étiquettes d&#x27;accessibilité résumant la plage de données visibles.</li>
+</ul>
+<p>Le spectre final prend également en charge le déplacement du marqueur de pivot de phase jaune.</p>
+<p>Utilisez le bouton d’agrandissement dans l’en-tête du spectre pour ouvrir un espace de travail limité au spectre, puis le bouton de fermeture pour revenir. Les données simulées conservent tous les panneaux de commande dans la superposition ; les FID Bruker, Varian et JEOL JDF conservent les panneaux Apodisation, Transformée de Fourier et Spectre de phase. Leur échelle en ppm est approximative et non référencée : elle utilise la largeur spectrale et la fréquence d’observation enregistrées, avec 0 ppm à droite.</p>
+<h2 id="practicalExperiments">Expériences pratiques</h2>
+<h3>Largeur et décroissance du pic</h3>
+<ol>
+<li>Allumez un pic.</li>
+<li>Dans <strong>Relaxation et intégration</strong>, diminuez puis augmentez le <strong>temps de relaxation (T1 = T2)</strong> de ce pic.</li>
+<li>Comparez la longueur FID avec la largeur finale du pic.</li>
+</ol>
+<p>Les FID plus courts produisent des pics plus larges. Les FID plus longs produisent des pics plus nets.</p>
+<h3>Remplissage de zéros</h3>
+<ol>
+<li>Désactivez <strong>Remplissage de zéros</strong>.</li>
+<li>Observez l’espacement final des points du spectre.</li>
+<li>Activez <strong>Remplissage de zéros</strong>.</li>
+</ol>
+<p>Le spectre devient interpolé de manière plus fluide, mais les informations mesurées sous-jacentes n&#x27;ont pas augmenté.</p>
+<h3>Moyennage du signal</h3>
+<ol>
+<li>Activez <strong>Ajouter du bruit à FID</strong>.</li>
+<li>Augmentez le niveau de bruit.</li>
+<li>Augmentez le <strong>Nombre d’acquisitions</strong>.</li>
+</ol>
+<p>Le bruit diminue lentement par rapport au nombre d’acquisitions, car le rapport signal/bruit s’améliore avec la racine carrée de ce nombre.</p>
+<h3>Compromis d&#x27;apodisation</h3>
+<ol>
+<li>Activez <strong>Élargissement de ligne</strong>.</li>
+<li>Augmentez le curseur.</li>
+<li>Regardez le FID traité raccourcir et le spectre final s&#x27;élargir.</li>
+</ol>
+<p>L&#x27;élargissement des lignes peut améliorer le rapport signal/bruit et réduire les artefacts de troncature, mais cela coûte cher en résolution.</p>
+<h3>Correction de phase</h3>
+<ol>
+<li>Utilisez le spectre final.</li>
+<li>Faites glisser le marqueur pivot jaune vers un pic ou vers le côté droit du spectre.</li>
+<li>Ajustez <strong>Ordre zéro</strong> et <strong>Premier ordre</strong> jusqu&#x27;à ce que les pics affichés semblent absorbants.</li>
+</ol>
+<h3>Réglage des shims</h3>
+<ol>
+<li>Activez <strong>Réglage des shims</strong>.</li>
+<li>Modifiez un shim <code>Z</code> à la fois.</li>
+<li>Regardez la distorsion finale du spectre.</li>
+<li>Utilisez <strong>Réinitialiser les zéros</strong> pour revenir à un champ idéal.</li>
+</ol>
+<h2 id="glossary">Glossaire</h2>
+<p><strong>Apodisation</strong><br>Une fenêtre mathématique appliquée au FID avant la transformation de Fourier.</p>
+<p><strong>FID</strong><br>Décroissance d’induction libre, le signal dans le domaine temporel recueilli lors d’une expérience de RMN.</p>
+<p><strong>Transformation de Fourier</strong><br>L&#x27;opération qui convertit le FID dans le domaine temporel en un spectre dans le domaine fréquentiel.</p>
+<p><strong>Élargissement de raie</strong><br>Apodisation exponentielle qui amortit le FID et élargit les pics.</p>
+<p><strong>Correction de phase</strong><br>Processus de combinaison de données réelles et imaginaires transformées afin que les pics apparaissent sous la forme d&#x27;absorption souhaitée.</p>
+<p><strong>Détection en quadrature</strong><br>Détection par canaux réels et imaginaires.</p>
+<p><strong>Shimming</strong><br>Ajuster les bobines de correction du champ magnétique pour que le champ soit homogène à travers l&#x27;échantillon.</p>
+<p><strong>Remplissage de zéros</strong><br>Ajout de points de valeur zéro au FID avant la transformation de Fourier pour améliorer l&#x27;interpolation numérique dans le spectre.</p>
+<h2 id="advancedNotes">Notes avancées</h2>
+<p>Ces détails sont utiles pour l&#x27;examen technique, mais ne devraient pas être la première explication présentée à la plupart des utilisateurs.</p>
+<ol>
+<li>Le curseur <strong>Couplage</strong> s&#x27;affiche sous la forme <code>0...50</code>. En interne, le simulateur divise la valeur du curseur affichée par <code>50</code> avant d&#x27;appliquer le couplage, de sorte que la valeur de couplage interne s&#x27;étend sur <code>0.0...1.0</code>.</li>
+<li>L’aide utilise la terminologie standard de RMN pour la phase : la phase d’ordre zéro est la rotation constante, la phase du premier ordre est le terme de phase linéaire et le pivot est le point où la contribution de la phase du premier ordre est nulle.</li>
+</ol></article>
+    </div>
+    </main>
+  <footer class="site-footer">
+    <p>Assistance et documentation de Laboratoire RMN FID · <a href="mailto:utchemnmr@gmail.com">utchemnmr@gmail.com</a></p>
+    <details class="language-menu">
+      <summary>Langues</summary>
+      <div class="language-links"><a href="/nmrtutor/en/help/" hreflang="en" lang="en">English</a>
+<a href="/nmrtutor/de/help/" hreflang="de" lang="de">Deutsch</a>
+<a href="/nmrtutor/es/help/" hreflang="es" lang="es">Español</a>
+<a href="/nmrtutor/es-419/help/" hreflang="es-419" lang="es-419">Español (Latinoamérica)</a>
+<a href="/nmrtutor/fr/help/" hreflang="fr" lang="fr" aria-current="page">Français</a>
+<a href="/nmrtutor/ja/help/" hreflang="ja" lang="ja">日本語</a>
+<a href="/nmrtutor/ko/help/" hreflang="ko" lang="ko">한국어</a>
+<a href="/nmrtutor/pt-BR/help/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="/nmrtutor/zh-Hans/help/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="/nmrtutor/zh-Hant/help/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></div>
+    </details>
+  </footer>
+</body>
+</html>

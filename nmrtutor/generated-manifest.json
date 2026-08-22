@@ -1,0 +1,49 @@
+{
+  "generator": "Scripts/generate_support_site.py",
+  "help_source_sha256": {
+    "de": "6e897286455e7145caab66a810f9de842aebef13748f8ddcaeb6fadbf9fff224",
+    "en": "d768e8a250db94744576a2c7400a0ff8640f2d52be09a2fde3affa34702c4f3f",
+    "es": "ceaa320e80aadb832b93166caa0063368e520a7005a958425d68f712fa0fca74",
+    "es-419": "fe377a2e8befa6de08ba009d9b80721afdb581219a01b1c6dc3b4d5a18c69fa0",
+    "fr": "7fc249139b9d3d8177b688b06ec9bdc78b56b8494a2637a0292a4730ba130a8f",
+    "ja": "779178572e1f84803f0b7176973329401ff2bf613fbe1030fbd46bb67cf13051",
+    "ko": "9b157bd46fcd5dd8e039c728e7945454f1b691fd4dd28bb39b3c358da360eb82",
+    "pt-BR": "e5404de87a22190a9a816dcb04bfbf783244b3a800cb998ce73849ee9e95ac86",
+    "zh-Hans": "9de8cf81228e80d46bcc591726ba0ceb0c65fd95791785e52946626adfb2cdb0",
+    "zh-Hant": "31a599322e43896f5870f76c7e8b929975a24884cb230f57dcc792cc75a8c5ed"
+  },
+  "locales": [
+    "en",
+    "de",
+    "es",
+    "es-419",
+    "fr",
+    "ja",
+    "ko",
+    "pt-BR",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "release_version": "2.4",
+  "topic_ids": [
+    "quickOrientation",
+    "suggestedWorkflow",
+    "setupPeaks",
+    "relaxationIntegration",
+    "apodization",
+    "noiseFID",
+    "mangleFID",
+    "fourierTransform",
+    "phaseSpectrum",
+    "shimming",
+    "rawRealFID",
+    "rawImaginaryFID",
+    "processedRealFID",
+    "processedImaginaryFID",
+    "spectrum",
+    "chartInteraction",
+    "practicalExperiments",
+    "glossary",
+    "advancedNotes"
+  ]
+}
