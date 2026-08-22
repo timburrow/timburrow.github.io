@@ -253,6 +253,16 @@ h3 {
   font-weight: 620;
 }
 
+.platforms a {
+  color: inherit;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.2em;
+}
+
+.platforms a:hover {
+  color: var(--teal-dark);
+}
+
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
