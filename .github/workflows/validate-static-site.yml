@@ -1,0 +1,29 @@
+name: Validate static site
+
+on:
+  pull_request:
+    paths:
+      - ".github/data/attenuator-content.json"
+      - ".github/scripts/generate_attenuator_site.py"
+      - ".github/scripts/validate_attenuator_site.py"
+      - ".github/workflows/validate-static-site.yml"
+      - "attenuator/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  attenuator:
+    name: Attenuator pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate localized content and assets
+        run: python3 .github/scripts/generate_attenuator_site.py --check
+      - name: Regenerate pages
+        run: python3 .github/scripts/generate_attenuator_site.py
+      - name: Validate pages, links, and metadata
+        run: python3 .github/scripts/validate_attenuator_site.py
+      - name: Verify committed pages are current
+        run: git diff --exit-code -- attenuator
