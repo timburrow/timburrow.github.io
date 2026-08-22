@@ -124,7 +124,7 @@ def page_shell(
   <meta property="og:image" content="{escape(image_url)}">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/attenuator/assets/app-icon.png">
-  <link rel="stylesheet" href="/attenuator/assets/site.css">
+  <link rel="stylesheet" href="/attenuator/assets/site.css?v=20260822-2">
 </head>
 <body>
   <a class="skip-link" href="#main">{escape(nav['skip'])}</a>
@@ -134,8 +134,8 @@ def page_shell(
         <img src="/attenuator/assets/app-icon.png" width="44" height="44" alt="">
         <span>Attenuator</span>
       </a>
-      <a class="companion-app" href="/nmrtutor/">
-        <img src="/nmrtutor/assets/app-icon.png" width="32" height="32" alt="">
+      <a class="brand" href="/nmrtutor/">
+        <img src="/nmrtutor/assets/app-icon.png" width="44" height="44" alt="">
         <span>NMR Tutor</span>
       </a>
     </div>

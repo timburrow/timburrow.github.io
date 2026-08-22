@@ -103,6 +103,12 @@ def validate() -> None:
             raise AssertionError(f"{path}: expected one NMR Tutor header link")
         if source.count('src="/nmrtutor/assets/app-icon.png"') != 1:
             raise AssertionError(f"{path}: expected one NMR Tutor header icon")
+        if source.count('class="brand"') != 2:
+            raise AssertionError(f"{path}: expected two equally styled app identities")
+        if 'class="companion-app"' in source:
+            raise AssertionError(f"{path}: companion app must not use secondary styling")
+        if '/attenuator/assets/site.css?v=20260822-2' not in source:
+            raise AssertionError(f"{path}: expected cache-versioned stylesheet")
         for src, alt in parser.images:
             if alt is None:
                 raise AssertionError(f"{path}: image is missing alt text: {src}")

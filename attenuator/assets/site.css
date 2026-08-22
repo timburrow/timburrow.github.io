@@ -104,35 +104,16 @@ img {
 .app-switcher {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.65rem;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
   min-width: 0;
+  overflow-x: auto;
+  padding-block: 0.1rem;
 }
 
-.companion-app {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.38rem 0.6rem;
-  border: 1px solid transparent;
-  border-radius: 12px;
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-decoration: none;
+.app-switcher .brand {
+  flex: 0 0 auto;
   white-space: nowrap;
-}
-
-.companion-app img {
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(17, 36, 49, 0.14);
-}
-
-.companion-app:hover,
-.companion-app:focus-visible {
-  border-color: var(--line);
-  color: var(--ink);
-  background: var(--aqua);
 }
 
 .primary-nav {
