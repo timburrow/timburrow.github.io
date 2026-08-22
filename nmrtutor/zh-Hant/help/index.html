@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="本指南由與App內相同的本地化說明來源產生。">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>NMR FID 教程說明 · NMR FID 教程</title>
+  <link rel="canonical" href="https://timburrow.github.io/nmrtutor/zh-Hant/help/">
+  <link rel="alternate" hreflang="en" href="https://timburrow.github.io/nmrtutor/en/help/">
+<link rel="alternate" hreflang="de" href="https://timburrow.github.io/nmrtutor/de/help/">
+<link rel="alternate" hreflang="es" href="https://timburrow.github.io/nmrtutor/es/help/">
+<link rel="alternate" hreflang="es-419" href="https://timburrow.github.io/nmrtutor/es-419/help/">
+<link rel="alternate" hreflang="fr" href="https://timburrow.github.io/nmrtutor/fr/help/">
+<link rel="alternate" hreflang="ja" href="https://timburrow.github.io/nmrtutor/ja/help/">
+<link rel="alternate" hreflang="ko" href="https://timburrow.github.io/nmrtutor/ko/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://timburrow.github.io/nmrtutor/pt-BR/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://timburrow.github.io/nmrtutor/zh-Hans/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://timburrow.github.io/nmrtutor/zh-Hant/help/">
+<link rel="alternate" hreflang="x-default" href="https://timburrow.github.io/nmrtutor/en/help/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NMR FID 教程說明">
+  <meta property="og:description" content="本指南由與App內相同的本地化說明來源產生。">
+  <meta property="og:url" content="https://timburrow.github.io/nmrtutor/zh-Hant/help/">
+  <meta property="og:image" content="https://timburrow.github.io/nmrtutor/assets/ipad.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/nmrtutor/assets/app-icon.png">
+  <link rel="stylesheet" href="/nmrtutor/assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至內容</a>
+  <header class="site-header">
+    <a class="brand" href="/nmrtutor/zh-Hant/">
+      <img src="/nmrtutor/assets/app-icon.png" width="44" height="44" alt="">
+      <span>NMR FID 教程</span>
+    </a>
+    <nav class="primary-nav" aria-label="NMR FID 教程"><a href="/nmrtutor/zh-Hant/">概覽</a><a href="/nmrtutor/zh-Hant/help/" aria-current="page">說明</a><a href="/nmrtutor/zh-Hant/support/">支援</a><a href="/nmrtutor/zh-Hant/privacy/">隱私權</a></nav>
+  </header>
+  <main id="main">
+    <section class="page-intro">
+      <p class="eyebrow">NMR FID 教程</p>
+      <h1>NMR FID 教程說明</h1>
+      <p class="lede">本指南由與App內相同的本地化說明來源產生。</p>
+    </section>
+    <div class="help-layout">
+      <aside class="toc"><h2>本指南中的主題</h2><ol><li class="toc-level-2"><a href="#quickOrientation">快速導覽</a></li><li class="toc-level-2"><a href="#suggestedWorkflow">建議工作流程</a></li><li class="toc-level-3"><a href="#setupPeaks">設定譜峰</a></li><li class="toc-level-3"><a href="#relaxationIntegration">鬆弛與積分</a></li><li class="toc-level-3"><a href="#apodization">加窗</a></li><li class="toc-level-3"><a href="#noiseFID">FID 雜訊</a></li><li class="toc-level-3"><a href="#mangleFID">擾動 FID</a></li><li class="toc-level-3"><a href="#fourierTransform">傅立葉轉換</a></li><li class="toc-level-3"><a href="#phaseSpectrum">相位校正</a></li><li class="toc-level-3"><a href="#shimming">勻場</a></li><li class="toc-level-3"><a href="#rawRealFID">未經處理的實部 FID</a></li><li class="toc-level-3"><a href="#rawImaginaryFID">未經處理的虛部 FID</a></li><li class="toc-level-3"><a href="#processedRealFID">處理後的實部 FID</a></li><li class="toc-level-3"><a href="#processedImaginaryFID">處理後的虛部 FID</a></li><li class="toc-level-3"><a href="#spectrum">FID 處理及傅立葉轉換後的頻譜</a></li><li class="toc-level-2"><a href="#chartInteraction">圖表互動</a></li><li class="toc-level-2"><a href="#practicalExperiments">實作練習</a></li><li class="toc-level-2"><a href="#glossary">術語表</a></li><li class="toc-level-2"><a href="#advancedNotes">進階說明</a></li></ol></aside>
+      <article class="help-content"><p>此說明檔案介紹了 NMR FID 教程 的工作區面板與五個圖表介面。</p>
+<h2 id="quickOrientation">快速導覽</h2>
+<p>NMR FID 教程 展示了時域 NMR 訊號如何轉換為頻域頻譜。</p>
+<ul>
+<li>FID（自由感應衰減）是光譜儀擷取到的訊號。</li>
+<li>FID 是基於時間的。它由隨時間衰減的重疊振盪訊號組成。</li>
+<li>實部 FID 與虛部 FID 通道是兩個正交偵測通道。</li>
+<li>「處理」操作會在傅立葉轉換之前改變 FID。</li>
+<li>傅立葉轉換將時域 FID 轉換為頻域頻譜。</li>
+<li>相位校正將轉換後的實部與虛部頻域資料組合成顯示的頻譜。</li>
+<li>勻場演示了磁場不均勻度如何扭曲 FID 與最終頻譜。</li>
+</ul>
+<p>在寬螢幕裝置上，工作區會將控制項顯示在所有五個圖表旁邊。在 iPhone 上，App 會將工作流程集中到緊湊的面板和可選的圖表檢視中，以確保相同的分析在小螢幕上同樣可用。</p>
+<p>外接顯示器與鏡像：</p>
+<ul>
+<li>在支援的 iPhone 機型上，NMR FID 教程 可以使用外接顯示器輸出。若要鏡像到 Apple TV，請打開<strong>控制中心 􀜊 &gt; 螢幕鏡像 􀏧</strong>：打開控制中心 􀜊，輕點<strong>螢幕鏡像 􀏧</strong>，然後選擇 Apple TV。</li>
+<li>在 iPad 上，可連接外接顯示器，或使用<strong>控制中心 􀜊 &gt; 螢幕鏡像 􀏧</strong>進行 AirPlay。當 iPadOS 提供外接顯示器場景時，NMR FID 教程 可以在連接的顯示器上僅顯示圖表；當 iPadOS 執行鏡像時，整個工作區都會被鏡像。</li>
+</ul>
+<h2 id="suggestedWorkflow">建議工作流程</h2>
+<ol>
+<li>從<strong>設定譜峰</strong>開始，選擇模擬的譜峰以及可選的耦合。</li>
+<li>使用<strong>鬆弛與積分</strong>比較兩個譜峰的 T1/T2 值並更改鬆弛延遲（d1）。</li>
+<li>觀察原始 FID 和最終頻譜中衰減、譜峰寬度以及基於模型的積分值如何變化。</li>
+<li>使用<strong>加窗</strong>、<strong>FID 雜訊</strong>和<strong>擾動 FID</strong>來應用真實的擷取與處理效果。</li>
+<li>使用<strong>傅立葉轉換</strong>進行零填充，並可選擇縮放第一個點。</li>
+<li>使用<strong>相位校正</strong>來校正頻域頻譜。</li>
+<li>使用<strong>勻場</strong>查看磁場不均勻度如何改變譜峰形狀。</li>
+<li>使用每個圖表的重設按鈕恢復該圖表的縮放/平移範圍，或從工作區工具列重設所有繪圖。</li>
+</ol>
+<h2>面板</h2>
+<h3 id="setupPeaks">設定譜峰</h3>
+<p>在處理之前，使用此面板建構模擬的 FID。</p>
+<p><strong>第一個譜峰位置</strong><br>啟用並定位第一個共振峰。滑桿範圍為 <code>-0.50...0.50</code>。將譜峰移離頻譜中心會增加 FID 中的振盪頻率。在時域圖表中，距載波頻率越遠的譜峰，振盪越快。</p>
+<p><strong>第二個譜峰位置</strong><br>啟用並定位第二個共振峰。滑桿範圍為 <code>-0.50...0.50</code>。同時啟用兩個譜峰時，FID 是兩個振盪衰減訊號的總和。</p>
+<p><strong>耦合</strong><br>打開兩個譜峰之間的耦合。滑桿範圍為 <code>0.00...50.00</code>。將滑桿向右拖動會增加表觀裂分，使 FID 和頻譜更加複雜。在較高數值下，兩個譜峰會形成更強的 AB 式耦合模式。</p>
+<p>觀察要點：</p>
+<ul>
+<li><strong>未經處理的實部 FID</strong> 和 <strong>未經處理的虛部 FID</strong> 會立即回應譜峰位置和耦合的變化。</li>
+<li><strong>FID 處理及傅立葉轉換後的頻譜</strong>會顯示相應的譜峰位置與耦合模式。</li>
+</ul>
+<h3 id="relaxationIntegration">鬆弛與積分</h3>
+<p>此面板示範定量 NMR 的一個核心要點：<strong>d1 過短會導致錯誤的積分值</strong>。兩個模擬譜峰分別具有獨立的 <strong>鬆弛時間（T1 = T2）</strong> 滑桿，範圍為 <code>0.5...5.0 s</code>。譜峰 1 的初始值為 <code>1.0 s</code>，譜峰 2 的初始值為 <code>3.0 s</code>。</p>
+<p><strong>鬆弛延遲（d1）</strong> 範圍為 <code>0...24 s</code>。擷取時間固定為 <code>5.0 s</code>，因此重複時間為：</p>
+<p><code>TR = 擷取時間 + d1</code></p>
+<p>施加固定的 90° 脈衝後，每個譜峰的穩態恢復量為 <code>1 − exp(−TR/T1)</code>。T1 越長，恢復越慢。在這個簡化課程中 T1 也等於 T2，因此增加譜峰的鬆弛時間會使其 FID 衰減得更慢，並使譜線變窄。</p>
+<p>使用預設值時，TR 為 <code>5.0 s</code>。譜峰 1 恢復到約 <code>0.993</code>，而譜峰 2 恢復到約 <code>0.811</code>。因此，兩個化學上相等的訊號會呈現約 <code>1.22:1</code> 的比例，而不是 <code>1:1</code>。當 <code>d1 = 10 s</code> 時，TR 是最長 T1 的五倍，該比例與預期值的差異約在百分之一以內。5 秒擷取視窗在保留現有 4,096 個取樣點的同時減少了可見的 FID 截斷。</p>
+<p>顯示的積分值根據已知的模擬譜峰 1 和譜峰 2 分量計算得出。即使顯示的譜線重疊或啟用了耦合，這種基於模型的計算仍然有效；它並非根據合成頻譜的峰高或峰寬估算面積。對於孤立的洛倫茲線，可以由峰高和半峰全寬推算面積，但該近似方法不適用於重疊譜線或耦合多重峰。匯入的 FID 沒有已知的來源分量，因此無法顯示此教學讀數。</p>
+<p>這是用於教學的穩態模型，並非研究級定量 NMR。實際訊號的 T1 和 T2 值通常不同，耦合自旋的鬆弛也可能比這裡使用的兩個分量包絡更複雜。</p>
+<h3 id="apodization">加窗</h3>
+<p>使用此面板在傅立葉轉換之前將窗函數與 FID 相乘。加窗可以提高訊噪比、減少截斷偽影，或者以靈敏度換取解析度。綠色的虛線加窗曲線會疊加在處理後的 FID 圖表上。</p>
+<p><strong>譜線展寬</strong><br>啟用指數乘法。滑桿範圍為 <code>0.00...10.00</code>。數值越大，對 FID 尾部的阻尼就越強。這通常能改善表觀訊噪比並減少截斷偽影，但會使譜峰展寬。</p>
+<p><strong>鐘形正弦</strong><br>啟用鐘形正弦窗函數。滑桿範圍為 <code>0.00...2.00</code>。鐘形正弦加權強調 FID 的中間或靠後部分，並向零逐漸減小，這有助於改善截斷行為。</p>
+<p><strong>鐘形正弦平方</strong><br>啟用鐘形正弦平方窗函數。滑桿範圍為 <code>0.00...2.00</code>。它是鐘形正弦窗的更強版本，在兩端附近具有更強的加權。</p>
+<p><strong>高斯</strong><br>啟用高斯乘法。滑桿範圍為 <code>0.00...10.00</code>。高斯加權應用鐘形窗，在某些情況下可以提高表觀解析度，但如果設定得過於極端，也可能改變線形或引入偽影。</p>
+<p>觀察要點：</p>
+<ul>
+<li><strong>處理後的實部 FID</strong> 和 <strong>處理後的虛部 FID</strong> 會顯示處理後的訊號和綠色加窗曲線。</li>
+<li>最終頻譜展示了譜峰寬度、譜峰形狀和訊噪比之間的取捨。</li>
+</ul>
+<h3 id="noiseFID">FID 雜訊</h3>
+<p>使用此面板添加真實的隨機雜訊，並探索訊號平均（累加）的效果。</p>
+<p><strong>向 FID 添加雜訊</strong><br>在處理後的 FID 中啟用雜訊。滑桿範圍為 <code>0.00...4.00</code>。數值越大，會為兩個 FID 通道添加越多的隨機變化。</p>
+<p><strong>掃描次數</strong><br>控制訊號平均。滑桿範圍為 <code>1...16</code> 次掃描。增加掃描次數會增加相對雜訊的訊號強度，但改善程度遵循掃描次數的平方根規律。在實際操作中，訊噪比加倍大約需要四倍的掃描次數。</p>
+<p><strong>頻譜訊噪比</strong> 將最終頻譜中的最高峰與自動選取的無訊號基線區域內量得的雜訊進行比較。有可靠測量值時，讀數會顯示在頻譜左上角。移動「雜訊」、「掃描次數」、窗函數、FID 變形或勻場滑桿時數值會即時更新，其他頻譜變更穩定後也會重新測量；雜訊已關閉或無法取得可靠測量值時會隱藏讀數。</p>
+<p>觀察要點：</p>
+<ul>
+<li>在處理後的 FID 圖表中最容易觀察到雜訊。</li>
+<li>在最終頻譜中，雜訊表現為基線波動，並降低小譜峰的可信度。</li>
+</ul>
+<h3 id="mangleFID">擾動 FID</h3>
+<p>使用此面板演示在頻譜中產生偽影的常見擷取或接收器問題。</p>
+<p><strong>垂直偏移實部 FID</strong><br>向實部 FID 通道添加垂直偏移。滑桿範圍為 <code>0.00...1.00</code>。偏移可能在轉換後產生基線偽影。</p>
+<p><strong>垂直縮放實部 FID</strong><br>縮放實部 FID 通道。滑桿範圍為 <code>0.00...2.00</code>。僅縮放實部通道會模擬通道不平衡，並可能產生僅靠相位校正無法修復的頻譜偽影。</p>
+<p><strong>延遲第一點</strong><br>模擬在第一個取樣點之前存在的一個微小擷取延遲，這主要影響相位。滑桿範圍為 <code>0.00...1.00</code>。這類似於擷取到的 FID 中出現的小數點延遲或與駐留時間相關的延遲。</p>
+<p><strong>增益過載</strong><br>對過載的 FID 值進行削波。滑桿範圍為 <code>0.00...1.00</code>。數值越大，削波臨界值越低。當前實作使用從實部通道最大絕對值推導出的限值來對兩個通道進行削波。</p>
+<p>觀察要點：</p>
+<ul>
+<li>處理後的 FID 圖表顯示了訊號受到的直接破壞。</li>
+<li>頻譜顯示了由通道不平衡、偏移、削波和延遲擷取引起的偽影。</li>
+</ul>
+<h3 id="fourierTransform">傅立葉轉換</h3>
+<p>使用此面板控制從時域到頻域的最終轉換。</p>
+<p><strong>校正基線和漂移</strong> 對於匯入的 Raw FID，NMR Tutor 會謹慎地將已充分衰減的複數 FID 尾端置中，接著擬合與正負號無關的平滑頻譜基線並將其移至零。Raw FID 資料保持不變，不確定的校正會被略過。關閉此選項可查看未經校正的處理路徑。</p>
+<p><strong>使用偵測到的數位濾波器延遲</strong> 部分 Bruker 和 JEOL FID 包含接收器延遲。NMR Tutor 通常會在處理前自動校正該延遲，同時保持 Raw FID 不變。標示為已校正的檔案不會再次校正。關閉<strong>使用偵測到的數位濾波器延遲</strong>可手動調整校正。</p>
+<p><strong>零填充</strong><br>啟用後，App 會在傅立葉轉換之前向 FID 附加等量的零點。這增加了頻域頻譜中的數位內插。零填充不會建立新的測量資料，但它能提供看起來更平滑的頻譜，並改善原始資料點之間譜峰的視覺定位。</p>
+<p><strong>縮放第一個點</strong><br>啟用後，第一個 FID 點在轉換前會乘以 <code>0.5</code>。這可以壓低頻譜基線。</p>
+<p>觀察要點：</p>
+<ul>
+<li>零填充增加了用於轉換頻譜的資料點數。</li>
+<li>縮放第一個點主要影響最終頻譜中的基線行為。</li>
+</ul>
+<h3 id="phaseSpectrum">相位校正</h3>
+<p>使用此面板校正轉換後的實部與虛部頻域資料如何組合成顯示的實部頻譜。</p>
+<p><strong>零階</strong><br>將整個頻譜旋轉相同的量。滑桿範圍約為 <code>-pi...pi</code> (<code>-3.14...3.14</code>)。</p>
+<p><strong>一階</strong><br>在頻譜範圍內線性改變相位。滑桿範圍約為 <code>-pi...pi</code> (<code>-3.14...3.14</code>)。</p>
+<p><strong>樞軸點</strong><br>設定一階相位貢獻為零的點。滑桿範圍為整個頻譜的 <code>0...100</code>%。也可以透過拖動頻譜上的黃色菱形標記來更改樞軸點。常見的教學策略是將樞軸點設定在最高譜峰處或頻譜的右側。</p>
+<p>觀察要點：</p>
+<ul>
+<li>隨著相位的校正，頻譜應呈現更明顯的吸收線形，減少色散線形。</li>
+<li>零階變化應廣泛影響整個頻譜。</li>
+<li>一階變化應使頻譜圍繞樞軸點旋轉。</li>
+</ul>
+<h3 id="shimming">勻場</h3>
+<p>使用此面板演示樣品內部的磁場不均勻度。</p>
+<p><strong>啟用勻場</strong><br>打開或關閉勻場模擬。</p>
+<p><strong>Z1 至 Z6</strong><br>調節貫穿 NMR 管的垂直勻場項。每個滑桿範圍為 <code>-1024...1024</code>。這些僅是軸向 <code>Z</code> 勻場；此工作區中不計算橫向勻場。</p>
+<p><strong>歸零</strong><br>將所有勻場項重設回零。</p>
+<p>觀察要點：</p>
+<ul>
+<li>勻場不良會扭曲 FID，並在頻譜中產生畸形、展寬或裂分的譜峰。</li>
+<li>最終頻譜通常是觀察勻場品質最清晰的地方，但 FID 也能顯示出調變和衰減的變化。</li>
+<li>在實際的 NMR 工作中，勻場通常在擷取之前透過手動或自動勻場程式進行調節。</li>
+</ul>
+<h2>圖表</h2>
+<h3 id="rawRealFID">未經處理的實部 FID</h3>
+<p>此圖表顯示了由活動譜峰生成的原始實部時域 FID。它是經過雜訊、擾動控制、加窗、勻場或傅立葉轉換之前的第一個正交偵測通道。</p>
+<p>使用它可以觀察：</p>
+<ul>
+<li>譜峰位置如何改變 FID 頻率；</li>
+<li>指數衰減如何改變包絡線；</li>
+<li>耦合如何改變波形的複雜度；</li>
+<li>實部通道與虛部通道的區別。</li>
+</ul>
+<h3 id="rawImaginaryFID">未經處理的虛部 FID</h3>
+<p>此圖表顯示了原始的虛部時域 FID。它與實部 FID 共同代表正交偵測。</p>
+<p>使用它可以觀察：</p>
+<ul>
+<li>處理前的第二個偵測通道；</li>
+<li>實部通道與虛部通道之間的相位關係；</li>
+<li>兩個通道如何攜帶最終構成頻譜的資訊。</li>
+</ul>
+<h3 id="processedRealFID">處理後的實部 FID</h3>
+<p>此圖表顯示了經過處理流程後的實部 FID。根據啟用的控制項，它可能包括掃描縮放、勻場、實部通道縮放、實部通道偏移、雜訊、增益削波、第一點延遲、第一點縮放和加窗。</p>
+<p>綠色虛線是加窗函數。如果沒有啟用加窗，它會保持平坦。</p>
+<p>使用它可以觀察：</p>
+<ul>
+<li>處理過程如何在轉換前改變實部時域資料；</li>
+<li>偏移、縮放、削波或雜訊是否破壞了 FID；</li>
+<li>加窗如何對早期點和晚期點進行加權。</li>
+</ul>
+<h3 id="processedImaginaryFID">處理後的虛部 FID</h3>
+<p>此圖表顯示了經過處理流程後的虛部 FID。它使用與處理後實部圖表相同的擷取與加窗操作，但明確僅影響實部通道的控制項不會直接縮放或偏移虛部通道。</p>
+<p>使用它可以觀察：</p>
+<ul>
+<li>雜訊、增益削波、勻場、延遲和加窗如何影響虛部通道；</li>
+<li>實部通道和虛部通道之間的不匹配如何變成頻譜偽影。</li>
+</ul>
+<h3 id="spectrum">FID 處理及傅立葉轉換後的頻譜</h3>
+<p>此圖表顯示了最終的頻域頻譜。它的計算過程是：對處理後的實部與虛部 FID 通道進行傅立葉轉換，然後應用相位校正以顯示實部頻譜。</p>
+<p>開啟已處理的 JCAMP-DX 頻譜時，App 會直接顯示其實部數值，不會透過反傅立葉轉換人為產生 FID。由於這些步驟已經完成，加窗、傅立葉轉換和相位校正控制項會被隱藏。匯入的虛部資料會保留在資料集中，但不會顯示。</p>
+<p>黃色菱形標記了相位樞軸點。水平拖動它可更改樞軸點位置。</p>
+<p>使用它可以觀察：</p>
+<ul>
+<li>譜峰位置和寬度；</li>
+<li>耦合模式；</li>
+<li>訊噪比變化；</li>
+<li>截斷和加窗效應；</li>
+<li>第一點縮放或 FID 偏移對基線的影響；</li>
+<li>由增益過載、延遲擷取、通道不平衡和勻場不良造成的偽影；</li>
+<li>零階和一階相位校正。</li>
+</ul>
+<h2 id="chartInteraction">圖表互動</h2>
+<p>每個圖表均支援：</p>
+<ul>
+<li>在繪圖區域內拖動以平移；</li>
+<li>在平台支援的地方使用雙指捏合縮放；</li>
+<li>針對該單一圖表的重設比例按鈕；</li>
+<li>圖表音訊播放（如果可用）；</li>
+<li>總結可見資料範圍的協助工具標籤。</li>
+</ul>
+<p>最終頻譜還支援拖動黃色的相位樞軸點標記。</p>
+<p>使用頻譜標題列中的展開按鈕可開啟僅顯示頻譜的工作區，再使用關閉按鈕返回。模擬資料仍可透過疊加層使用全部控制面板；Bruker、Varian 和 JEOL JDF FID 仍可使用窗函數、傅立葉轉換和相位頻譜面板。其 ppm 尺度為未校正的近似值：根據記錄的頻譜寬度和觀測頻率計算，並將右端設為 0 ppm。</p>
+<h2 id="practicalExperiments">實作練習</h2>
+<h3>譜峰寬度與衰減</h3>
+<ol>
+<li>打開一個譜峰。</li>
+<li>在<strong>鬆弛與積分</strong>中，調低和調高該譜峰的<strong>鬆弛時間（T1 = T2）</strong>。</li>
+<li>比較 FID 長度與最終譜峰寬度的關係。</li>
+</ol>
+<p>較短的 FID 會產生較寬的譜峰。較長的 FID 會產生更尖銳的譜峰。</p>
+<h3>零填充</h3>
+<ol>
+<li>關閉<strong>零填充</strong>。</li>
+<li>觀察最終頻譜的資料點間距。</li>
+<li>打開<strong>零填充</strong>。</li>
+</ol>
+<p>頻譜內插變得更加平滑，但底層的測量資訊並沒有增加。</p>
+<h3>訊號平均</h3>
+<ol>
+<li>啟用<strong>向 FID 添加雜訊</strong>。</li>
+<li>提高雜訊水平。</li>
+<li>增加<strong>掃描次數</strong>。</li>
+</ol>
+<p>雜訊相對於掃描次數的下降速度較慢，因為訊噪比的提升遵循掃描次數的平方根規律。</p>
+<h3>加窗取捨</h3>
+<ol>
+<li>啟用<strong>譜線展寬</strong>。</li>
+<li>增大滑桿數值。</li>
+<li>觀察處理後的 FID 縮短以及最終頻譜變寬。</li>
+</ol>
+<p>譜線展寬可以提高訊噪比並減少截斷偽影，但會犧牲解析度。</p>
+<h3>相位校正</h3>
+<ol>
+<li>觀察最終頻譜。</li>
+<li>將黃色樞軸點標記拖動到一個譜峰上或頻譜的右側。</li>
+<li>調整<strong>零階</strong>和<strong>一階</strong>，直到顯示的譜峰呈現吸收線形。</li>
+</ol>
+<h3>勻場</h3>
+<ol>
+<li>啟用<strong>勻場</strong>。</li>
+<li>每次移動一個 <code>Z</code> 勻場滑桿。</li>
+<li>觀察最終頻譜的失真情況。</li>
+<li>使用<strong>歸零</strong>返回到理想磁場。</li>
+</ol>
+<h2 id="glossary">術語表</h2>
+<p><strong>加窗</strong><br>在傅立葉轉換之前應用於 FID 的數學窗函數。</p>
+<p><strong>FID</strong><br>自由感應衰減，在 NMR 實驗中擷取的時域訊號。</p>
+<p><strong>傅立葉轉換</strong><br>將時域 FID 轉換為頻域頻譜的數學運算。</p>
+<p><strong>譜線展寬</strong><br>指數加窗，用於阻尼 FID 並展寬譜峰。</p>
+<p><strong>相位校正</strong><br>將轉換後的實部資料與虛部資料組合起來的過程，使譜峰呈現所需的吸收線形。</p>
+<p><strong>正交偵測</strong><br>使用實部與虛部通道進行偵測的方法。</p>
+<p><strong>勻場</strong><br>調節磁場校正線圈，使樣品內部的磁場均勻。</p>
+<p><strong>零填充</strong><br>在傅立葉轉換之前將零值資料點附加到 FID 末尾，以提高頻譜中的數位內插效果。</p>
+<h2 id="advancedNotes">進階說明</h2>
+<p>這些詳細資訊適用於技術審查，但不應作為面向大多數使用者的首要解釋。</p>
+<ol>
+<li><strong>耦合</strong>滑桿顯示為 <code>0...50</code>。在內部，模擬器在應用耦合之前會將顯示的滑桿值除以 <code>50</code>，因此內部耦合值的範圍是 <code>0.0...1.0</code>。</li>
+<li>本說明檔案使用了標準的 NMR 相位術語：零階相位是恆定旋轉，一階相位是線性相位項，而樞軸點是一階相位貢獻為零的位置。</li>
+</ol></article>
+    </div>
+    </main>
+  <footer class="site-footer">
+    <p>NMR FID 教程支援與文件 · <a href="mailto:utchemnmr@gmail.com">utchemnmr@gmail.com</a></p>
+    <details class="language-menu">
+      <summary>語言</summary>
+      <div class="language-links"><a href="/nmrtutor/en/help/" hreflang="en" lang="en">English</a>
+<a href="/nmrtutor/de/help/" hreflang="de" lang="de">Deutsch</a>
+<a href="/nmrtutor/es/help/" hreflang="es" lang="es">Español</a>
+<a href="/nmrtutor/es-419/help/" hreflang="es-419" lang="es-419">Español (Latinoamérica)</a>
+<a href="/nmrtutor/fr/help/" hreflang="fr" lang="fr">Français</a>
+<a href="/nmrtutor/ja/help/" hreflang="ja" lang="ja">日本語</a>
+<a href="/nmrtutor/ko/help/" hreflang="ko" lang="ko">한국어</a>
+<a href="/nmrtutor/pt-BR/help/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="/nmrtutor/zh-Hans/help/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="/nmrtutor/zh-Hant/help/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體中文</a></div>
+    </details>
+  </footer>
+</body>
+</html>

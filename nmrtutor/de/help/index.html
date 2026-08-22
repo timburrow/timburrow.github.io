@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dieser Leitfaden wird aus derselben lokalisierten Hilfequelle erzeugt, die in der App enthalten ist.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Hilfe zu NMR-FID-Labor · NMR-FID-Labor</title>
+  <link rel="canonical" href="https://timburrow.github.io/nmrtutor/de/help/">
+  <link rel="alternate" hreflang="en" href="https://timburrow.github.io/nmrtutor/en/help/">
+<link rel="alternate" hreflang="de" href="https://timburrow.github.io/nmrtutor/de/help/">
+<link rel="alternate" hreflang="es" href="https://timburrow.github.io/nmrtutor/es/help/">
+<link rel="alternate" hreflang="es-419" href="https://timburrow.github.io/nmrtutor/es-419/help/">
+<link rel="alternate" hreflang="fr" href="https://timburrow.github.io/nmrtutor/fr/help/">
+<link rel="alternate" hreflang="ja" href="https://timburrow.github.io/nmrtutor/ja/help/">
+<link rel="alternate" hreflang="ko" href="https://timburrow.github.io/nmrtutor/ko/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://timburrow.github.io/nmrtutor/pt-BR/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://timburrow.github.io/nmrtutor/zh-Hans/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://timburrow.github.io/nmrtutor/zh-Hant/help/">
+<link rel="alternate" hreflang="x-default" href="https://timburrow.github.io/nmrtutor/en/help/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hilfe zu NMR-FID-Labor">
+  <meta property="og:description" content="Dieser Leitfaden wird aus derselben lokalisierten Hilfequelle erzeugt, die in der App enthalten ist.">
+  <meta property="og:url" content="https://timburrow.github.io/nmrtutor/de/help/">
+  <meta property="og:image" content="https://timburrow.github.io/nmrtutor/assets/ipad.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/nmrtutor/assets/app-icon.png">
+  <link rel="stylesheet" href="/nmrtutor/assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header">
+    <a class="brand" href="/nmrtutor/de/">
+      <img src="/nmrtutor/assets/app-icon.png" width="44" height="44" alt="">
+      <span>NMR-FID-Labor</span>
+    </a>
+    <nav class="primary-nav" aria-label="NMR-FID-Labor"><a href="/nmrtutor/de/">Übersicht</a><a href="/nmrtutor/de/help/" aria-current="page">Hilfe</a><a href="/nmrtutor/de/support/">Support</a><a href="/nmrtutor/de/privacy/">Datenschutz</a></nav>
+  </header>
+  <main id="main">
+    <section class="page-intro">
+      <p class="eyebrow">NMR-FID-Labor</p>
+      <h1>Hilfe zu NMR-FID-Labor</h1>
+      <p class="lede">Dieser Leitfaden wird aus derselben lokalisierten Hilfequelle erzeugt, die in der App enthalten ist.</p>
+    </section>
+    <div class="help-layout">
+      <aside class="toc"><h2>Themen in diesem Leitfaden</h2><ol><li class="toc-level-2"><a href="#quickOrientation">Kurze Orientierung</a></li><li class="toc-level-2"><a href="#suggestedWorkflow">Empfohlener Ablauf</a></li><li class="toc-level-3"><a href="#setupPeaks">Peaks konfigurieren</a></li><li class="toc-level-3"><a href="#relaxationIntegration">Relaxation und Integration</a></li><li class="toc-level-3"><a href="#apodization">Apodisierung</a></li><li class="toc-level-3"><a href="#noiseFID">FID-Rauschen</a></li><li class="toc-level-3"><a href="#mangleFID">FID verändern</a></li><li class="toc-level-3"><a href="#fourierTransform">Fourier-Transformation</a></li><li class="toc-level-3"><a href="#phaseSpectrum">Spektrum phasieren</a></li><li class="toc-level-3"><a href="#shimming">Shimming</a></li><li class="toc-level-3"><a href="#rawRealFID">Realer FID ohne Verarbeitung</a></li><li class="toc-level-3"><a href="#rawImaginaryFID">Imaginärer FID ohne Verarbeitung</a></li><li class="toc-level-3"><a href="#processedRealFID">Realer FID nach Verarbeitung</a></li><li class="toc-level-3"><a href="#processedImaginaryFID">Imaginärer FID nach Verarbeitung</a></li><li class="toc-level-3"><a href="#spectrum">Spektrum nach FID-Verarbeitung und Fourier-Transformation</a></li><li class="toc-level-2"><a href="#chartInteraction">Diagramminteraktion</a></li><li class="toc-level-2"><a href="#practicalExperiments">Praktische Experimente</a></li><li class="toc-level-2"><a href="#glossary">Glossar</a></li><li class="toc-level-2"><a href="#advancedNotes">Erweiterte Hinweise</a></li></ol></aside>
+      <article class="help-content"><p>Diese Hilfe beschreibt die Arbeitsbereich-Panels und die fünf Diagrammflächen von NMR-FID-Labor.</p>
+<h2 id="quickOrientation">Kurze Orientierung</h2>
+<p>NMR-FID-Labor zeigt, wie aus einem Zeitbereichs-NMR-Signal ein Frequenzbereichsspektrum wird.</p>
+<ul>
+<li>Der FID (freier Induktionsabfall) ist das vom Spektrometer erfasste Signal.</li>
+<li>Der FID ist zeitbasiert. Er besteht aus überlappenden oszillierenden Signalen, die mit der Zeit abklingen.</li>
+<li>Die realen und imaginären FID-Kanäle sind die beiden Quadraturdetektionskanäle.</li>
+<li>Die Verarbeitung verändert den FID vor der Fourier-Transformation.</li>
+<li>Die Fourier-Transformation wandelt den Zeitbereichs-FID in das Frequenzbereichsspektrum um.</li>
+<li>Die Phasenkorrektur kombiniert die transformierten realen und imaginären Frequenzbereichsdaten im angezeigten Spektrum.</li>
+<li>Shimming zeigt, wie Inhomogenität des Magnetfelds den FID und das endgültige Spektrum verzerrt.</li>
+</ul>
+<p>Auf Breitbildschirmen zeigt der Arbeitsbereich die Steuerelemente neben allen fünf Diagrammen. Auf dem iPhone kann die App den Arbeitsablauf auf kompakte Panels und auswählbare Diagrammansichten konzentrieren, sodass dieselbe Analyse auch auf einem kleineren Bildschirm nutzbar bleibt.</p>
+<p>Externes Display und Spiegeln:</p>
+<ul>
+<li>Auf unterstützten iPhone-Modellen kann NMR-FID-Labor eine externe Displayausgabe verwenden. Zum Spiegeln auf ein Apple TV öffne <strong>Kontrollzentrum 􀜊 &gt; Bildschirmsynchronisierung 􀏧</strong>: Öffne das Kontrollzentrum 􀜊, tippe auf <strong>Bildschirmsynchronisierung 􀏧</strong> und wähle dann das Apple TV.</li>
+<li>Auf dem iPad kannst du ein externes Display anschließen oder <strong>Kontrollzentrum 􀜊 &gt; Bildschirmsynchronisierung 􀏧</strong> für AirPlay verwenden. Wenn iPadOS eine externe Display-Szene bereitstellt, kann NMR-FID-Labor eine reine Diagrammansicht auf dem verbundenen Display anzeigen; wenn iPadOS stattdessen spiegelt, wird der gesamte Arbeitsbereich gespiegelt.</li>
+</ul>
+<h2 id="suggestedWorkflow">Empfohlener Ablauf</h2>
+<ol>
+<li>Beginnen Sie mit <strong>Peaks konfigurieren</strong>, um die simulierten Peaks und die optionale Kopplung auszuwählen.</li>
+<li>Vergleichen Sie unter <strong>Relaxation und Integration</strong> die T1/T2-Werte beider Peaks und ändern Sie die Relaxationsverzögerung (d1).</li>
+<li>Beobachten Sie, wie sich Abklingen, Peakbreite und modellbasierte Integrale im rohen FID und im endgültigen Spektrum ändern.</li>
+<li>Verwenden Sie <strong>Apodisierung</strong>, <strong>FID-Rauschen</strong> und <strong>FID verändern</strong>, um realistische Erfassungs- und Verarbeitungseffekte anzuwenden.</li>
+<li>Verwenden Sie <strong>Fourier-Transformation</strong> zum Auffüllen mit Nullen und skalieren Sie optional den ersten Punkt.</li>
+<li>Verwenden Sie <strong>Phasenkorrektur</strong>, um das Frequenzbereichsspektrum zu korrigieren.</li>
+<li>Verwenden Sie <strong>Shimming</strong>, um zu sehen, wie die Feldinhomogenität die Peakform verändert.</li>
+<li>Verwenden Sie die Reset-Schaltfläche jedes Diagramms, um den Zoom-/Schwenkbereich dieses Diagramms wiederherzustellen, oder setzen Sie alle Diagramme über die Arbeitsbereichssymbolleiste zurück.</li>
+</ol>
+<h2>Panels</h2>
+<h3 id="setupPeaks">Peaks konfigurieren</h3>
+<p>Verwenden Sie dieses Panel, um das simulierte FID vor der Verarbeitung zu erstellen.</p>
+<p><strong>Erste Peakposition</strong><br>Aktiviert und positioniert die erste Resonanz. Der Schiebereglerbereich ist <code>-0.50...0.50</code>. Wenn man einen Peak vom Zentrum des Spektrums wegbewegt, erhöht sich die Schwingungsfrequenz im FID. Peaks, die weiter von der Trägerfrequenz entfernt sind, schwingen in den Zeitbereichsdiagrammen schneller.</p>
+<p><strong>Zweite Peakposition</strong><br>Aktiviert und positioniert die zweite Resonanz. Der Schiebereglerbereich ist <code>-0.50...0.50</code>. Wenn beide Peaks aktiviert sind, ist der FID die Summe beider oszillierender Abklingkurven.</p>
+<p><strong>Exponentielle Abklingkonstante</strong><br>Steuert die Abklingrate des FID. Der Schiebereglerbereich ist <code>0.01...4.00</code>. Eine größere Abklingkonstante lässt den FID schneller abklingen und verbreitert den Frequenzbereichspeak. Ein kleinerer Wert führt zu einem längeren FID und erzeugt schärfere Peaks.</p>
+<p><strong>Kopplung</strong><br>Schaltet die Kopplung zwischen den beiden Peaks ein. Der Schiebereglerbereich ist <code>0.00...50.00</code>. Wenn Sie den Schieberegler nach oben bewegen, wird das scheinbare Splitting verstärkt und der FID und das Spektrum werden komplexer. Bei höheren Werten bilden die beiden Peaks ein stärker gekoppeltes AB-artiges Muster.</p>
+<p>Was Sie sehen sollten:</p>
+<ul>
+<li><strong>Realer FID ohne Verarbeitung</strong> und <strong>Imaginärer FID ohne Verarbeitung</strong> reagieren sofort auf Peakposition, Abklingen und Kopplung.</li>
+<li><strong>Spektrum nach der Verarbeitung von FID und der Fourier-Transformation</strong> zeigt die entsprechenden Peakpositionen, Breiten und Kopplungsmuster.</li>
+</ul>
+<h3 id="relaxationIntegration">Relaxation und Integration</h3>
+<p>Dieses Panel vermittelt die zentrale Lektion der quantitativen NMR: <strong>Ein kurzes d1 kann zu falschen Integralen führen</strong>. Beide simulierten Peaks besitzen unabhängige Regler für die <strong>Relaxationszeit (T1 = T2)</strong> von <code>0.5...5.0 s</code>. Peak 1 beginnt bei <code>1.0 s</code>, Peak 2 bei <code>3.0 s</code>.</p>
+<p>Die <strong>Relaxationsverzögerung (d1)</strong> reicht von <code>0...24 s</code>. Die Akquisitionszeit ist auf <code>5.0 s</code> festgelegt, daher gilt für die Repetitionszeit:</p>
+<p><code>TR = Akquisitionszeit + d1</code></p>
+<p>Nach einem festen 90°-Puls beträgt die stationäre Erholung jedes Peaks <code>1 − exp(−TR/T1)</code>. Ein längeres T1 erholt sich langsamer. In dieser vereinfachten Lektion ist T1 zugleich T2; eine längere Relaxationszeit lässt das FID deshalb langsamer abklingen und erzeugt eine schmalere Spektrallinie.</p>
+<p>Bei den Standardwerten beträgt TR <code>5.0 s</code>. Peak 1 erholt sich auf etwa <code>0.993</code>, Peak 2 auf etwa <code>0.811</code>. Zwei chemisch gleichwertige Signale erscheinen daher ungefähr im Verhältnis <code>1.22:1</code> statt <code>1:1</code>. Bei <code>d1 = 10 s</code> ist TR fünfmal so lang wie das längste T1, und das Verhältnis liegt innerhalb von ungefähr einem Prozent des erwarteten Werts. Das 5-Sekunden-Akquisitionsfenster reduziert sichtbare FID-Trunkierung und behält die vorhandenen 4.096 Datenpunkte bei.</p>
+<p>Die angezeigten Integrale werden aus den bekannten simulierten Komponenten von Peak 1 und Peak 2 berechnet. Diese modellbasierte Berechnung bleibt gültig, wenn sich Linien überlappen oder die Kopplung aktiviert ist; sie schätzt die Fläche nicht aus Höhe oder Breite des kombinierten Spektrums. Bei einer isolierten Lorentz-Linie kann die Fläche mit Höhe und Halbwertsbreite verknüpft werden, doch für überlappende Linien oder ein gekoppeltes Multiplett ist diese Abkürzung unzuverlässig. Importierte FIDs besitzen keine bekannten Ausgangskomponenten, daher ist diese Lehranzeige für sie nicht verfügbar.</p>
+<p>Dies ist ein didaktisches stationäres Modell und keine qNMR-Methode für Forschungszwecke. Reale Signale besitzen im Allgemeinen unterschiedliche T1- und T2-Werte, und die Relaxation gekoppelter Spins kann komplexer sein als die hier verwendeten zwei Komponenten-Hüllkurven.</p>
+<h3 id="apodization">Apodisierung</h3>
+<p>Verwenden Sie dieses Bedienfeld, um den FID vor der Fourier-Transformation mit Fensterfunktionen zu multiplizieren. Apodisierung kann das Signal-Rausch-Verhältnis verbessern, Trunkierungsartefakte reduzieren oder Empfindlichkeit gegen Auflösung eintauschen. Die grün gestrichelte Apodisierungskurve wird den verarbeiteten FID-Diagrammen überlagert.</p>
+<p><strong>Linienverbreiterung</strong><br>Aktiviert die exponentielle Multiplikation. Der Schiebereglerbereich ist <code>0.00...10.00</code>. Größere Werte dämpfen das Ende des FID stärker. Dadurch wird häufig das scheinbare Signal-Rausch-Verhältnis verbessert und Trunkierungsartefakte reduziert, die Peaks werden jedoch verbreitert.</p>
+<p><strong>Sinebell</strong><br>Aktiviert ein Sinebell-Fenster. Der Schiebereglerbereich ist <code>0.00...2.00</code>. Die Sinebell-Gewichtung betont den mittleren oder späteren Teil von FID und verjüngt sich in Richtung Null, was beim Kürzungsverhalten hilfreich sein kann.</p>
+<p><strong>Sinebell quadriert</strong><br>Aktiviert ein quadratisches Sinebell-Fenster. Der Schiebereglerbereich ist <code>0.00...2.00</code>. Es handelt sich um eine stärkere Variante des Sinebell-Fensters mit aggressiverer Gewichtung an den Enden.</p>
+<p><strong>Gauß</strong><br>Aktiviert die Gaußsche Multiplikation. Der Schiebereglerbereich ist <code>0.00...10.00</code>. Die Gaußsche Gewichtung wendet ein glockenförmiges Fenster an, das in manchen Fällen die scheinbare Auflösung verbessern kann, bei zu hoher Einstellung aber auch Linienformen verändern oder Artefakte verursachen kann.</p>
+<p>Was Sie sehen sollten:</p>
+<ul>
+<li><strong>Realer FID nach der Verarbeitung</strong> und <strong>Imaginärer FID nach der Verarbeitung</strong> zeigen sowohl das verarbeitete Signal als auch die grüne Apodisierungskurve.</li>
+<li>Das endgültige Spektrum zeigt den Kompromiss zwischen Peakbreite, Peakform und Signal-Rausch-Verhältnis.</li>
+</ul>
+<h3 id="noiseFID">FID-Rauschen</h3>
+<p>Verwenden Sie dieses Bedienfeld, um realistisches Zufallsrauschen hinzuzufügen und die Signalmittelung zu erkunden.</p>
+<p><strong>Rauschen zu FID hinzufügen</strong><br>Aktiviert Rauschen im verarbeiteten FID. Der Schiebereglerbereich ist <code>0.00...4.00</code>. Größere Werte fügen beiden FID-Kanälen mehr zufällige Variationen hinzu.</p>
+<p><strong>Anzahl der Scans</strong><br>Steuert die Signalmittelung. Der Schiebereglerbereich beträgt <code>1...16</code> Scans. Durch Erhöhen der Anzahl der Scans erhöht sich das Signal im Verhältnis zum Rauschen, die Verbesserung folgt jedoch der Quadratwurzel der Anzahl der Scans. In der Praxis erfordert eine Verdoppelung des Signal-Rausch-Verhältnisses etwa viermal so viele Scans.</p>
+<p><strong>Spektrum-SNR</strong> Gibt den höchsten Peak im endgültigen Spektrum im Verhältnis zum Rauschen in einem automatisch ausgewählten freien Grundlinienbereich an. Der Messwert erscheint oben links im Spektrum, sobald eine zuverlässige Messung vorliegt. Er wird beim Bewegen eines Reglers für Rauschen, Scananzahl, Apodisierung, FID-Verformung oder Shimming live aktualisiert und nach anderen Spektrumsänderungen erneut gemessen; bei ausgeschaltetem Rauschen oder ohne zuverlässige Messung wird er ausgeblendet.</p>
+<p>Was Sie sehen sollten:</p>
+<ul>
+<li>Rauschen ist am einfachsten in den verarbeiteten FID-Diagrammen zu erkennen.</li>
+<li>Im endgültigen Spektrum erscheint Rauschen als Grundlinienrauheit und verringertes Vertrauen in kleine Peaks.</li>
+</ul>
+<h3 id="mangleFID">FID verändern</h3>
+<p>Verwenden Sie dieses Panel, um häufige Erfassungs- oder Empfängerprobleme zu demonstrieren, die zu Artefakten im Spektrum führen.</p>
+<p><strong>Realen FID vertikal verschieben</strong><br>Fügt dem realen FID-Kanal einen vertikalen Versatz hinzu. Der Schiebereglerbereich ist <code>0.00...1.00</code>. Ein Offset kann nach der Transformation zu Basislinienartefakten führen.</p>
+<p><strong>Realen FID vertikal skalieren</strong><br>Skaliert den realen FID-Kanal. Der Schiebereglerbereich ist <code>0.00...2.00</code>. Die Skalierung nur des realen Kanals simuliert ein Kanalungleichgewicht und kann spektrale Artefakte erzeugen, die durch Phasenkorrektur allein nicht behoben werden können.</p>
+<p><strong>Ersten Punkt verzögern</strong><br>Simuliert eine kleine Erfassungsverzögerung vor dem ersten Abtastpunkt, die sich hauptsächlich auf die Phase auswirkt. Der Schiebereglerbereich ist <code>0.00...1.00</code>. Dies verhält sich wie eine punktuelle oder verweilzeitbezogene Verzögerung im erfassten FID.</p>
+<p><strong>Verstärkerübersteuerung</strong><br>Schneidet übersteuerte FID-Werte ab. Der Schiebereglerbereich ist <code>0.00...1.00</code>. Größere Werte senken die Clipping-Schwelle. Die aktuelle Implementierung schneidet beide Kanäle mithilfe eines Grenzwerts ab, der vom maximalen Absolutwert des realen Kanals abgeleitet wird.</p>
+<p>Was Sie sehen sollten:</p>
+<ul>
+<li>Die verarbeiteten FID-Diagramme zeigen den direkten Schaden.</li>
+<li>Das Spektrum zeigt Artefakte, die durch Kanalungleichgewicht, Offset, Clipping und verzögerte Erfassung verursacht werden.</li>
+</ul>
+<h3 id="fourierTransform">Fourier-Transformation</h3>
+<p>Verwenden Sie dieses Bedienfeld, um die endgültige Konvertierung vom Zeitbereich in den Frequenzbereich zu steuern.</p>
+<p><strong>Basislinie und Drift korrigieren</strong> Bei einem importierten Roh-FID zentriert NMR Tutor vorsichtig das Ende eines abgeklungenen komplexen FID, passt anschließend eine glatte, vorzeichenunabhängige spektrale Basislinie an und verschiebt sie auf null. Die Roh-FID-Daten bleiben unverändert; unsichere Korrekturen werden übersprungen. Schalten Sie diese Option aus, um den unkorrigierten Verarbeitungsweg anzuzeigen.</p>
+<p><strong>Ermittelte Digitalfilterverzögerung verwenden</strong> Einige Bruker- und JEOL-FIDs enthalten eine Empfängerverzögerung. NMR Tutor korrigiert sie normalerweise automatisch vor der Verarbeitung, während der Roh-FID unverändert bleibt. Als bereits korrigiert gekennzeichnete Dateien bleiben unverändert. Schalten Sie <strong>Ermittelte Digitalfilterverzögerung verwenden</strong> aus, um die Korrektur manuell anzupassen.</p>
+<p><strong>Auffüllen mit Nullen</strong><br>Wenn diese Option aktiviert ist, hängt die App vor der Fourier-Transformation eine gleiche Anzahl von Nullen an den FID an. Dies erhöht die digitale Interpolation im Frequenzbereichsspektrum. Durch das Nullfüllen werden keine neuen Messdaten erstellt, aber es ergibt ein glatteres Spektrum und eine bessere visuelle Platzierung der Peaks zwischen den ursprünglichen Datenpunkten.</p>
+<p><strong>Ersten Punkt skalieren</strong><br>Wenn diese Option aktiviert ist, wird der erste FID-Punkt vor der Transformation mit <code>0.5</code> multipliziert. Dies kann die Basislinie des Spektrums senken.</p>
+<p>Was Sie sehen sollten:</p>
+<ul>
+<li>Auffüllen mit Nullen erhöht die Anzahl der für das transformierte Spektrum verwendeten Punkte.</li>
+<li>Skalierung des ersten Punkts beeinflusst hauptsächlich das Grundlinienverhalten im endgültigen Spektrum.</li>
+</ul>
+<h3 id="phaseSpectrum">Spektrum phasieren</h3>
+<p>Verwenden Sie dieses Bedienfeld, um zu korrigieren, wie die transformierten realen und imaginären Frequenzbereichsdaten zum angezeigten realen Spektrum kombiniert werden.</p>
+<p><strong>Nullte Ordnung</strong><br>Dreht das gesamte Spektrum um den gleichen Betrag. Der Schiebereglerbereich beträgt ungefähr <code>-pi...pi</code> (<code>-3.14...3.14</code>).</p>
+<p><strong>Erste Ordnung</strong><br>Ändert die Phase linear über das Spektrum. Der Schiebereglerbereich beträgt ungefähr <code>-pi...pi</code> (<code>-3.14...3.14</code>).</p>
+<p><strong>Drehpunkt</strong><br>Legt den Punkt fest, an dem der Phasenbeitrag erster Ordnung null ist. Der Schiebereglerbereich beträgt <code>0...100</code> Prozent über das gesamte Spektrum. Der Pivot kann auch durch Ziehen der gelben Rautenmarkierung im Spektrumdiagramm geändert werden. Eine gängige Unterrichtsstrategie besteht darin, sich auf den höchsten Peak oder auf die rechte Seite des Spektrums zu konzentrieren.</p>
+<p>Was Sie sehen sollten:</p>
+<ul>
+<li>Das Spektrum sollte mit der Phasenkorrektur stärker absorbierend und weniger dispersiv werden.</li>
+<li>Änderungen nullter Ordnung sollten sich umfassend auf das Spektrum auswirken.</li>
+<li>Änderungen erster Ordnung sollten das Spektrum um den Drehpunkt drehen.</li>
+</ul>
+<h3 id="shimming">Shimming</h3>
+<p>Verwenden Sie dieses Panel, um die Inhomogenität des Magnetfelds durch die Probe zu demonstrieren.</p>
+<p><strong>Shimming aktivieren</strong><br>Schaltet die Shim-Simulation ein und aus.</p>
+<p><strong>Z1 bis Z6</strong><br>Passen Sie die vertikalen Shim-Terme durch das NMR-Rohr an. Jeder Schiebereglerbereich ist <code>-1024...1024</code>. Dies sind nur die axialen <code>Z</code>-Shims; transversale Shims werden in diesem Arbeitsbereich nicht berechnet.</p>
+<p><strong>Nullen zurücksetzen</strong><br>Setzt alle Shim-Terme auf Null zurück.</p>
+<p>Was Sie sehen sollten:</p>
+<ul>
+<li>Schlechte Shims verzerren den FID und erzeugen unförmige, verbreiterte oder geteilte Peaks im Spektrum.</li>
+<li>Das endgültige Spektrum ist normalerweise der deutlichste Ort, um die Shim-Qualität zu erkennen, aber der FID kann auch Modulations- und Abklingänderungen zeigen.</li>
+<li>Bei echten NMR-Arbeiten werden Shims normalerweise vor der Erfassung angepasst, entweder manuell oder mit automatischem Shimming.</li>
+</ul>
+<h2>Diagramme</h2>
+<h3 id="rawRealFID">Realer FID ohne Verarbeitung</h3>
+<p>Dieses Diagramm zeigt den rohen realen Zeitbereichs-FID, der aus den aktiven Peaks generiert wurde. Es ist der erste Quadraturkanal vor Rauschen, FID-Veränderung, Apodisierung, Shimming oder Fourier-Transformation.</p>
+<p>Verwenden Sie es, um Folgendes zu sehen:</p>
+<ul>
+<li>wie die Peakposition die FID-Frequenz verändert;</li>
+<li>wie exponentielles Abklingen die Hüllkurve verändert;</li>
+<li>wie die Kopplung die Wellenformkomplexität verändert;</li>
+<li>wie sich der reale Kanal vom imaginären Kanal unterscheidet.</li>
+</ul>
+<h3 id="rawImaginaryFID">Imaginärer FID ohne Verarbeitung</h3>
+<p>Dieses Diagramm zeigt den rohen imaginären Zeitbereichs-FID. Zusammen mit dem realen FID repräsentiert es die Quadraturdetektion.</p>
+<p>Verwenden Sie es, um Folgendes zu sehen:</p>
+<ul>
+<li>der zweite Detektionskanal vor der Verarbeitung;</li>
+<li>Phasenbeziehung zwischen realen und imaginären Kanälen;</li>
+<li>wie beide Kanäle Informationen übertragen, die zum Spektrum werden.</li>
+</ul>
+<h3 id="processedRealFID">Realer FID nach Verarbeitung</h3>
+<p>Dieses Diagramm zeigt den realen FID nach der Verarbeitungskette. Abhängig von den aktiven Steuerelementen kann es die Skalierung entsprechend der Scananzahl, Shimming, die Skalierung und den Offset des realen Kanals, Rauschen, Clipping durch Verstärkerübersteuerung, die Verzögerung und Skalierung des ersten Punkts sowie Apodisierung umfassen.</p>
+<p>Die gestrichelte grüne Linie ist die Apodisierungsfunktion. Wenn keine Apodisierung aktiv ist, bleibt sie flach.</p>
+<p>Verwenden Sie es, um Folgendes zu sehen:</p>
+<ul>
+<li>wie die Verarbeitung die realen Zeitbereichsdaten vor der Transformation verändert;</li>
+<li>ob Offset, Skalierung, Clipping oder Rauschen den FID beschädigt haben;</li>
+<li>wie die Apodisierung frühe und späte Punkte gewichtet.</li>
+</ul>
+<h3 id="processedImaginaryFID">Imaginärer FID nach Verarbeitung</h3>
+<p>Dieses Diagramm zeigt den imaginären FID nach der Verarbeitungskette. Es verwendet die gleichen Erfassungs- und Apodisierungsvorgänge wie das Diagramm des verarbeiteten realen FID, mit der Ausnahme, dass Steuerelemente, die sich explizit nur auf den realen Kanal auswirken, den imaginären Kanal nicht direkt skalieren oder versetzen.</p>
+<p>Verwenden Sie es, um Folgendes zu sehen:</p>
+<ul>
+<li>wie sich Rauschen, Clipping durch Verstärkerübersteuerung, Shimming, Verzögerung und Apodisierung auf den imaginären Kanal auswirken;</li>
+<li>wie Unstimmigkeiten zwischen realen und imaginären Kanälen zu spektralen Artefakten führen können.</li>
+</ul>
+<h3 id="spectrum">Spektrum nach FID-Verarbeitung und Fourier-Transformation</h3>
+<p>Dieses Diagramm zeigt das endgültige Frequenzbereichsspektrum. Es wird berechnet, indem die verarbeiteten realen und imaginären FID-Kanäle Fourier-transformiert werden und anschließend eine Phasenkorrektur angewendet wird, um das reale Spektrum anzuzeigen.</p>
+<p>Wenn Sie ein verarbeitetes JCAMP-DX-Spektrum öffnen, werden seine Realwerte direkt angezeigt. Die App führt keine inverse Fourier-Transformation durch, um eine FID zu erzeugen. Apodisierungs-, Fourier-Transformations- und Phasenregler sind ausgeblendet, da diese Schritte bereits ausgeführt wurden. Eine importierte Imaginärkomponente bleibt im Datensatz erhalten, wird aber nicht angezeigt.</p>
+<p>Die gelbe Raute markiert den Phasen-Pivotpunkt. Ziehen Sie sie horizontal, um den Pivotpunkt zu ändern.</p>
+<p>Verwenden Sie es, um Folgendes zu sehen:</p>
+<ul>
+<li>Peakposition und -breite;</li>
+<li>Kopplungsmuster;</li>
+<li>Signal-Rausch-Änderungen;</li>
+<li>Trunkierungs- und Apodisierungseffekte;</li>
+<li>Basislinieneffekte durch Erstpunktskalierung oder FID-Offset;</li>
+<li>Artefakte durch Verstärkerübersteuerung, verzögerte Erfassung, Kanalungleichgewicht und schlechte Shims;</li>
+<li>Phasenkorrektur nullter und erster Ordnung.</li>
+</ul>
+<h2 id="chartInteraction">Diagramminteraktion</h2>
+<p>Jedes Diagramm unterstützt:</p>
+<ul>
+<li>Schwenken durch Ziehen im Plotbereich;</li>
+<li>Pinch-Zoom dort, wo die Plattform dies unterstützt;</li>
+<li>eine Schaltfläche zum Zurücksetzen des Maßstabs für dieses einzelne Diagramm;</li>
+<li>Audiowiedergabe grafisch darstellen, sofern verfügbar;</li>
+<li>Barrierefreiheitsetiketten, die den sichtbaren Datenbereich zusammenfassen.</li>
+</ul>
+<p>Das endgültige Spektrum unterstützt zusätzlich das Ziehen der gelben Phasen-Pivot-Markierung.</p>
+<p>Mit der Schaltfläche zum Vergrößern in der Spektrum-Kopfzeile öffnen Sie einen reinen Spektrum-Arbeitsbereich; mit der Schaltfläche zum Schließen kehren Sie zurück. Bei simulierten Daten bleiben alle Bedienfelder im Overlay verfügbar; bei Bruker-, Varian- und JEOL-JDF-FIDs bleiben die Panels Apodisation, Fourier-Transformation und Phasenspektrum verfügbar. Ihre ppm-Skala ist ungefähr und nicht referenziert: Sie verwendet die aufgezeichnete Spektralbreite und Beobachtungsfrequenz, wobei 0 ppm am rechten Rand liegt.</p>
+<h2 id="practicalExperiments">Praktische Experimente</h2>
+<h3>Peakbreite und Abklingverhalten</h3>
+<ol>
+<li>Schalten Sie einen Peak ein.</li>
+<li>Stellen Sie unter <strong>Relaxation und Integration</strong> die <strong>Relaxationszeit (T1 = T2)</strong> dieses Peaks niedriger und höher ein.</li>
+<li>Vergleichen Sie die FID-Länge mit der endgültigen Peakbreite.</li>
+</ol>
+<p>Kürzere FIDs erzeugen breitere Peaks. Längere FIDs erzeugen schärfere Peaks.</p>
+<h3>Auffüllen mit Nullen</h3>
+<ol>
+<li>Schalten Sie <strong>Auffüllen mit Nullen</strong> aus.</li>
+<li>Beobachten Sie den endgültigen Punktabstand des Spektrums.</li>
+<li>Schalten Sie <strong>Auffüllen mit Nullen</strong> ein.</li>
+</ol>
+<p>Das Spektrum wird gleichmäßiger interpoliert, die zugrunde liegende Messinformation hat jedoch nicht zugenommen.</p>
+<h3>Signalmittelung</h3>
+<ol>
+<li>Aktivieren Sie <strong>Rauschen zu FID hinzufügen</strong>.</li>
+<li>Erhöhen Sie den Geräuschpegel.</li>
+<li>Erhöhen Sie die <strong>Anzahl der Scans</strong>.</li>
+</ol>
+<p>Das Rauschen nimmt im Verhältnis zur Anzahl der Scans langsam ab, da sich das Signal-Rausch-Verhältnis mit der Quadratwurzel der Anzahl der Scans verbessert.</p>
+<h3>Apodisierungskompromiss</h3>
+<ol>
+<li>Aktivieren Sie <strong>Linienverbreiterung</strong>.</li>
+<li>Erhöhen Sie den Schieberegler.</li>
+<li>Beobachten Sie, wie sich das verarbeitete FID verkürzt und das endgültige Spektrum verbreitert.</li>
+</ol>
+<p>Eine Linienverbreiterung kann das Signal-Rausch-Verhältnis verbessern und Trunkierungsartefakte reduzieren, kostet jedoch Auflösung.</p>
+<h3>Phasenkorrektur</h3>
+<ol>
+<li>Verwenden Sie das endgültige Spektrum.</li>
+<li>Ziehen Sie die gelbe Pivot-Markierung auf einen Peak oder auf die rechte Seite des Spektrums.</li>
+<li>Passen Sie <strong>Nullte Ordnung</strong> und <strong>Erste Ordnung</strong> an, bis die angezeigten Peaks absorbierend aussehen.</li>
+</ol>
+<h3>Shimmen</h3>
+<ol>
+<li>Aktivieren Sie <strong>Shimming</strong>.</li>
+<li>Bewegen Sie jeweils einen <code>Z</code>-Shim.</li>
+<li>Beobachten Sie, wie sich das endgültige Spektrum verzerrt.</li>
+<li>Verwenden Sie <strong>Nullen zurücksetzen</strong>, um zu einem idealen Feld zurückzukehren.</li>
+</ol>
+<h2 id="glossary">Glossar</h2>
+<p><strong>Apodisierung</strong><br>Ein mathematisches Fenster, das vor der Fourier-Transformation auf den FID angewendet wird.</p>
+<p><strong>FID</strong><br>Freier Induktionsabfall, das in einem NMR-Experiment erfasste Zeitbereichssignal.</p>
+<p><strong>Fourier-Transformation</strong><br>Die Operation, die den Zeitbereichs-FID in ein Frequenzbereichsspektrum umwandelt.</p>
+<p><strong>Linienverbreiterung</strong><br>Exponentielle Apodisierung, die den FID dämpft und Peaks verbreitert.</p>
+<p><strong>Phasenkorrektur</strong><br>Der Prozess der Kombination transformierter realer und imaginärer Daten, sodass Peaks in der gewünschten Absorptionsform erscheinen.</p>
+<p><strong>Quadraturdetektion</strong><br>Detektion mithilfe realer und imaginärer Kanäle.</p>
+<p><strong>Shimming</strong><br>Anpassung der Magnetfeldkorrekturspulen, sodass das Feld in der Probe homogen ist.</p>
+<p><strong>Auffüllen mit Nullen</strong><br>Anhängen von nullwertigen Punkten an den FID vor der Fourier-Transformation, um die digitale Interpolation im Spektrum zu verbessern.</p>
+<h2 id="advancedNotes">Erweiterte Hinweise</h2>
+<p>Diese Details sind für die technische Überprüfung nützlich, sollten aber für die meisten Benutzer nicht die erste Erklärung sein, die ihnen angezeigt wird.</p>
+<ol>
+<li>Der Schieberegler <strong>Kopplung</strong> wird als <code>0...50</code> angezeigt. Intern dividiert der Simulator den angezeigten Schiebereglerwert durch <code>50</code>, bevor er die Kopplung anwendet, sodass der interne Kopplungswert <code>0.0...1.0</code> umfasst.</li>
+<li>In der Hilfe wird die standardmäßige NMR-Terminologie für die Phase verwendet: Phase nullter Ordnung ist die konstante Rotation, Phase erster Ordnung ist der lineare Phasenterm und der Pivot ist dort, wo der Beitrag der Phase erster Ordnung Null ist.</li>
+</ol></article>
+    </div>
+    </main>
+  <footer class="site-footer">
+    <p>Support und Dokumentation für NMR-FID-Labor · <a href="mailto:utchemnmr@gmail.com">utchemnmr@gmail.com</a></p>
+    <details class="language-menu">
+      <summary>Sprachen</summary>
+      <div class="language-links"><a href="/nmrtutor/en/help/" hreflang="en" lang="en">English</a>
+<a href="/nmrtutor/de/help/" hreflang="de" lang="de" aria-current="page">Deutsch</a>
+<a href="/nmrtutor/es/help/" hreflang="es" lang="es">Español</a>
+<a href="/nmrtutor/es-419/help/" hreflang="es-419" lang="es-419">Español (Latinoamérica)</a>
+<a href="/nmrtutor/fr/help/" hreflang="fr" lang="fr">Français</a>
+<a href="/nmrtutor/ja/help/" hreflang="ja" lang="ja">日本語</a>
+<a href="/nmrtutor/ko/help/" hreflang="ko" lang="ko">한국어</a>
+<a href="/nmrtutor/pt-BR/help/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="/nmrtutor/zh-Hans/help/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="/nmrtutor/zh-Hant/help/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></div>
+    </details>
+  </footer>
+</body>
+</html>

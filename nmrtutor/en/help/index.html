@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This guide is generated from the same localized Help source included with the app.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>NMR Tutor Help · NMR Tutor</title>
+  <link rel="canonical" href="https://timburrow.github.io/nmrtutor/en/help/">
+  <link rel="alternate" hreflang="en" href="https://timburrow.github.io/nmrtutor/en/help/">
+<link rel="alternate" hreflang="de" href="https://timburrow.github.io/nmrtutor/de/help/">
+<link rel="alternate" hreflang="es" href="https://timburrow.github.io/nmrtutor/es/help/">
+<link rel="alternate" hreflang="es-419" href="https://timburrow.github.io/nmrtutor/es-419/help/">
+<link rel="alternate" hreflang="fr" href="https://timburrow.github.io/nmrtutor/fr/help/">
+<link rel="alternate" hreflang="ja" href="https://timburrow.github.io/nmrtutor/ja/help/">
+<link rel="alternate" hreflang="ko" href="https://timburrow.github.io/nmrtutor/ko/help/">
+<link rel="alternate" hreflang="pt-BR" href="https://timburrow.github.io/nmrtutor/pt-BR/help/">
+<link rel="alternate" hreflang="zh-Hans" href="https://timburrow.github.io/nmrtutor/zh-Hans/help/">
+<link rel="alternate" hreflang="zh-Hant" href="https://timburrow.github.io/nmrtutor/zh-Hant/help/">
+<link rel="alternate" hreflang="x-default" href="https://timburrow.github.io/nmrtutor/en/help/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NMR Tutor Help">
+  <meta property="og:description" content="This guide is generated from the same localized Help source included with the app.">
+  <meta property="og:url" content="https://timburrow.github.io/nmrtutor/en/help/">
+  <meta property="og:image" content="https://timburrow.github.io/nmrtutor/assets/ipad.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/nmrtutor/assets/app-icon.png">
+  <link rel="stylesheet" href="/nmrtutor/assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="/nmrtutor/en/">
+      <img src="/nmrtutor/assets/app-icon.png" width="44" height="44" alt="">
+      <span>NMR Tutor</span>
+    </a>
+    <nav class="primary-nav" aria-label="NMR Tutor"><a href="/nmrtutor/en/">Overview</a><a href="/nmrtutor/en/help/" aria-current="page">Help</a><a href="/nmrtutor/en/support/">Support</a><a href="/nmrtutor/en/privacy/">Privacy</a></nav>
+  </header>
+  <main id="main">
+    <section class="page-intro">
+      <p class="eyebrow">NMR Tutor</p>
+      <h1>NMR Tutor Help</h1>
+      <p class="lede">This guide is generated from the same localized Help source included with the app.</p>
+    </section>
+    <div class="help-layout">
+      <aside class="toc"><h2>Topics in this guide</h2><ol><li class="toc-level-2"><a href="#quickOrientation">Quick Orientation</a></li><li class="toc-level-2"><a href="#suggestedWorkflow">Suggested Workflow</a></li><li class="toc-level-3"><a href="#setupPeaks">Setup Peaks</a></li><li class="toc-level-3"><a href="#relaxationIntegration">Relaxation &amp; Integration</a></li><li class="toc-level-3"><a href="#apodization">Apodization</a></li><li class="toc-level-3"><a href="#noiseFID">Noise FID</a></li><li class="toc-level-3"><a href="#mangleFID">Mangle FID</a></li><li class="toc-level-3"><a href="#fourierTransform">Fourier Transform</a></li><li class="toc-level-3"><a href="#phaseSpectrum">Phase Spectrum</a></li><li class="toc-level-3"><a href="#shimming">Shimming</a></li><li class="toc-level-3"><a href="#rawRealFID">Real FID without processing</a></li><li class="toc-level-3"><a href="#rawImaginaryFID">Imaginary FID without processing</a></li><li class="toc-level-3"><a href="#processedRealFID">Real FID after processing</a></li><li class="toc-level-3"><a href="#processedImaginaryFID">Imaginary FID after processing</a></li><li class="toc-level-3"><a href="#spectrum">Spectrum after FID is processed and Fourier transformed</a></li><li class="toc-level-2"><a href="#chartInteraction">Chart Interaction</a></li><li class="toc-level-2"><a href="#practicalExperiments">Practical Experiments</a></li><li class="toc-level-2"><a href="#glossary">Glossary</a></li><li class="toc-level-2"><a href="#advancedNotes">Advanced Notes</a></li></ol></aside>
+      <article class="help-content"><p>This help file describes the NMR Tutor workspace panels and the five chart surfaces. It is based on the legacy tutorial text, the NMRTutor8 SwiftUI control names, and the supplied NMR/apodization and shimming references.</p>
+<h2 id="quickOrientation">Quick Orientation</h2>
+<p>NMR Tutor shows how a time-domain NMR signal becomes a frequency-domain spectrum.</p>
+<ul>
+<li>The FID, or free induction decay, is the signal collected by the spectrometer.</li>
+<li>The FID is time-based. It is made from overlapping oscillating signals that decay over time.</li>
+<li>The real and imaginary FID channels are the two quadrature detection channels.</li>
+<li>Processing changes the FID before the Fourier transform.</li>
+<li>The Fourier transform converts the time-domain FID into the frequency-domain spectrum.</li>
+<li>Phasing combines the transformed real and imaginary frequency-domain data into the displayed spectrum.</li>
+<li>Shimming demonstrates how magnetic-field inhomogeneity distorts the FID and final spectrum.</li>
+</ul>
+<p>On wide screens the workspace shows the controls beside all five charts. On iPhone the app may focus the workflow into compact panels and selectable chart views so the same analysis remains usable on a smaller screen.</p>
+<p>External display and mirroring:</p>
+<ul>
+<li>On supported iPhone models, NMR Tutor can use external display output. To mirror to an Apple TV instead, open <strong>Control Center 􀜊 &gt; Screen Mirroring 􀏧</strong>: open Control Center 􀜊, tap <strong>Screen Mirroring 􀏧</strong>, then choose the Apple TV.</li>
+<li>On iPad, connect an external display or use <strong>Control Center 􀜊 &gt; Screen Mirroring 􀏧</strong> for AirPlay. When iPadOS provides an external display scene, NMR Tutor can show chart-only output on the connected display; when iPadOS mirrors instead, the whole workspace is mirrored.</li>
+</ul>
+<h2 id="suggestedWorkflow">Suggested Workflow</h2>
+<ol>
+<li>Start with <strong>Setup Peaks</strong> to choose the simulated peaks and optional coupling.</li>
+<li>Use <strong>Relaxation &amp; Integration</strong> to compare both peaks&#x27; T1/T2 values and change relaxation delay (d1).</li>
+<li>Watch the raw FID and final spectrum as decay, peak width, and model-based integrals change.</li>
+<li>Use <strong>Apodization</strong>, <strong>Noise FID</strong>, and <strong>Mangle FID</strong> to apply realistic acquisition and processing effects.</li>
+<li>Use <strong>Fourier Transform</strong> to zero fill and optionally scale the first point.</li>
+<li>Use <strong>Phase Spectrum</strong> to correct the frequency-domain spectrum.</li>
+<li>Use <strong>Shimming</strong> to see how field inhomogeneity changes peak shape.</li>
+<li>Use each chart&#x27;s reset button to restore that chart&#x27;s zoom/pan range, or reset all plots from the workspace toolbar.</li>
+</ol>
+<h2>Panels</h2>
+<h3 id="setupPeaks">Setup Peaks</h3>
+<p>Use this panel to build the simulated FID before processing.</p>
+<p><strong>First Peak Position</strong><br>Enables and positions the first resonance. The slider range is <code>-0.50...0.50</code>. Moving a peak away from the spectrum center increases the oscillation frequency in the FID. Peaks farther from the carrier frequency oscillate faster in the time-domain charts.</p>
+<p><strong>Second Peak Position</strong><br>Enables and positions the second resonance. The slider range is <code>-0.50...0.50</code>. With both peaks enabled, the FID is the sum of both oscillating decays.</p>
+<p><strong>Coupling</strong><br>Turns on coupling between the two peaks. The slider range is <code>0.00...50.00</code>. Moving the slider higher increases the apparent splitting and makes the FID and spectrum more complex. At higher values, the two peaks form a stronger coupled AB-style pattern.</p>
+<p>What to watch:</p>
+<ul>
+<li><strong>Real FID without processing</strong> and <strong>Imaginary FID without processing</strong> respond immediately to peak position and coupling.</li>
+<li><strong>Spectrum after FID is processed and Fourier transformed</strong> shows the corresponding peak positions and coupling pattern.</li>
+</ul>
+<h3 id="relaxationIntegration">Relaxation &amp; Integration</h3>
+<p>This panel demonstrates the central quantitative-NMR lesson: <strong>a short d1 can produce wrong integrals</strong>. Both simulated peaks have independent <strong>relaxation time (T1 = T2)</strong> sliders from <code>0.5...5.0 s</code>. Peak 1 starts at <code>1.0 s</code> and Peak 2 starts at <code>3.0 s</code>.</p>
+<p><strong>Relaxation delay (d1)</strong> ranges from <code>0...24 s</code>. Acquisition time is fixed at <code>5.0 s</code>, so repetition time is:</p>
+<p><code>TR = acquisition time + d1</code></p>
+<p>After a fixed 90° pulse, the steady-state recovery for each peak is <code>1 − exp(−TR/T1)</code>. A longer T1 recovers more slowly. In this simplified lesson T1 also equals T2, so increasing a peak&#x27;s relaxation time makes its FID decay more slowly and its spectrum line narrower.</p>
+<p>At the defaults, TR is <code>5.0 s</code>. Peak 1 recovers to about <code>0.993</code>, while Peak 2 recovers to about <code>0.811</code>. Two chemically equal signals therefore appear at about <code>1.22:1</code> instead of <code>1:1</code>. At <code>d1 = 10 s</code>, TR is five times the longest T1 and the ratio is within roughly one percent of the expected value. The 5-second acquisition window reduces visible FID truncation while retaining the existing 4,096 sample points.</p>
+<p>The displayed integrals are calculated from the known simulated Peak 1 and Peak 2 components. This model-based calculation remains valid when the displayed lines overlap or coupling is enabled; it does not estimate area from the height or width of the combined spectrum. For an isolated Lorentzian, area can be related to height and full width at half maximum, but that shortcut is not reliable for overlapping lines or a coupled multiplet. Imported FIDs do not have known source components, so this teaching readout is unavailable for them.</p>
+<p>This is an educational steady-state model, not research-grade qNMR. Real signals generally have different T1 and T2 values, and coupled-spin relaxation can be more complex than the two component envelopes used here.</p>
+<h3 id="apodization">Apodization</h3>
+<p>Use this panel to multiply the FID by window functions before Fourier transformation. Apodization can improve signal-to-noise, reduce truncation artifacts, or trade sensitivity for resolution. The green dashed apodization curve is overlaid on the processed FID charts.</p>
+<p><strong>Line broadening</strong><br>Enables exponential multiplication. The slider range is <code>0.00...10.00</code>. Larger values damp the end of the FID more strongly. This often improves apparent signal-to-noise and reduces truncation artifacts, but it broadens peaks.</p>
+<p><strong>Sinebell</strong><br>Enables a sinebell window. The slider range is <code>0.00...2.00</code>. Sinebell weighting emphasizes the middle or later part of the FID and tapers toward zero, which can help with truncation behavior.</p>
+<p><strong>Sinebell squared</strong><br>Enables a squared sinebell window. The slider range is <code>0.00...2.00</code>. It is a stronger version of the sinebell taper, with more aggressive weighting near the ends.</p>
+<p><strong>Gaussian</strong><br>Enables Gaussian multiplication. The slider range is <code>0.00...10.00</code>. Gaussian weighting applies a bell-shaped window that can improve apparent resolution in some cases, but it may also change lineshapes or introduce artifacts if pushed too far.</p>
+<p>What to watch:</p>
+<ul>
+<li><strong>Real FID after processing</strong> and <strong>Imaginary FID after processing</strong> show both the processed signal and the green apodization curve.</li>
+<li>The final spectrum shows the tradeoff between peak width, peak shape, and signal-to-noise.</li>
+</ul>
+<h3 id="noiseFID">Noise FID</h3>
+<p>Use this panel to add realistic random noise and explore signal averaging.</p>
+<p><strong>Add noise to FID</strong><br>Enables noise in the processed FID. The slider range is <code>0.00...4.00</code>. Larger values add more random variation to both FID channels.</p>
+<p><strong>Number of scans</strong><br>Controls signal averaging. The slider range is <code>1...16</code> scans. Increasing the number of scans increases signal relative to noise, but the improvement follows the square root of the number of scans. In practice, doubling signal-to-noise requires roughly four times as many scans.</p>
+<p><strong>Spectrum SNR</strong> Reports the tallest peak in the final spectrum relative to noise measured in an automatically selected clear baseline region. The readout appears in the top-left of the spectrum plot whenever a reliable measurement is available. It updates live while a Noise, Number of Scans, Apodization, Mangle FID, or Shimming slider moves and is remeasured after other spectrum changes settle; it is hidden when noise is off or no reliable measurement is available.</p>
+<p>What to watch:</p>
+<ul>
+<li>Noise is easiest to see in the processed FID charts.</li>
+<li>In the final spectrum, noise appears as baseline roughness and reduced confidence in small peaks.</li>
+</ul>
+<h3 id="mangleFID">Mangle FID</h3>
+<p>Use this panel to demonstrate common acquisition or receiver problems that produce artifacts in the spectrum.</p>
+<p><strong>Offset Real FID vertically</strong><br>Adds a vertical offset to the real FID channel. The slider range is <code>0.00...1.00</code>. An offset can create baseline artifacts after transformation.</p>
+<p><strong>Scale Real FID vertically</strong><br>Scales the real FID channel. The slider range is <code>0.00...2.00</code>. Scaling only the real channel simulates channel imbalance and can create spectral artifacts that phasing alone cannot fix.</p>
+<p><strong>Delay first point</strong><br>Simulates a small acquisition delay before the first sampled point, which mainly affects phase. The slider range is <code>0.00...1.00</code>. This behaves like a fractional-point or dwell-time-related delay in the acquired FID.</p>
+<p><strong>Gain overload</strong><br>Clips overloaded FID values. The slider range is <code>0.00...1.00</code>. Larger values lower the clipping threshold. The current implementation clips both channels using a limit derived from the maximum absolute value of the real channel.</p>
+<p>What to watch:</p>
+<ul>
+<li>The processed FID charts show the direct damage.</li>
+<li>The spectrum shows artifacts caused by channel imbalance, offset, clipping, and delayed acquisition.</li>
+</ul>
+<h3 id="fourierTransform">Fourier Transform</h3>
+<p>Use this panel to control the final conversion from time domain to frequency domain.</p>
+<p><strong>Correct baseline and drift</strong> For an imported raw FID, NMR Tutor conservatively centers the tail of a decayed complex FID, then fits a smooth sign-independent spectral baseline and shifts it to zero. Raw FID data stay unchanged, and uncertain corrections are skipped. Turn this off to see the uncorrected processing path.</p>
+<p><strong>Use detected delay</strong> Some Bruker and JEOL FIDs include a receiver delay. NMR Tutor normally corrects it automatically before processing, while leaving the Raw FID unchanged. Files marked as already corrected are left alone. Turn off <strong>Use detected delay</strong> to adjust the correction manually.</p>
+<p><strong>Zero fill</strong><br>When enabled, the app appends an equal number of zeroes to the FID before Fourier transformation. This increases digital interpolation in the frequency-domain spectrum. Zero filling does not create new measured data, but it gives a smoother-looking spectrum and better visual placement of peaks between original data points.</p>
+<p><strong>Scale first point</strong><br>When enabled, the first FID point is multiplied by <code>0.5</code> before transformation. This can lower the spectrum baseline.</p>
+<p>What to watch:</p>
+<ul>
+<li>Zero fill increases the number of points used for the transformed spectrum.</li>
+<li>Scale first point mostly affects baseline behavior in the final spectrum.</li>
+</ul>
+<h3 id="phaseSpectrum">Phase Spectrum</h3>
+<p>Use this panel to correct how the transformed real and imaginary frequency-domain data combine into the displayed real spectrum.</p>
+<p><strong>Zero order</strong><br>Rotates the entire spectrum by the same amount. The slider range is approximately <code>-pi...pi</code> (<code>-3.14...3.14</code>).</p>
+<p><strong>First order</strong><br>Changes phase linearly across the spectrum. The slider range is approximately <code>-pi...pi</code> (<code>-3.14...3.14</code>).</p>
+<p><strong>Pivot point</strong><br>Sets the point where the first-order phase contribution is zero. The slider range is <code>0...100</code> percent across the spectrum. The pivot can also be changed by dragging the yellow diamond marker on the spectrum chart. A common teaching strategy is to pivot on the tallest peak or on the right side of the spectrum.</p>
+<p>What to watch:</p>
+<ul>
+<li>The spectrum should become more absorptive and less dispersive as phase is corrected.</li>
+<li>Zero-order changes should affect the spectrum broadly.</li>
+<li>First-order changes should rotate the spectrum around the pivot point.</li>
+</ul>
+<h3 id="shimming">Shimming</h3>
+<p>Use this panel to demonstrate magnetic-field inhomogeneity through the sample.</p>
+<p><strong>Enable shimming</strong><br>Turns the shim simulation on and off.</p>
+<p><strong>Z1 through Z6</strong><br>Adjust vertical shim terms through the NMR tube. Each slider range is <code>-1024...1024</code>. These are the axial <code>Z</code> shims only; transverse shims are not calculated in this workspace.</p>
+<p><strong>Reset zeroes</strong><br>Sets all shim terms back to zero.</p>
+<p>What to watch:</p>
+<ul>
+<li>Bad shims distort the FID and produce misshapen, broadened, or split peaks in the spectrum.</li>
+<li>The final spectrum is usually the clearest place to see shim quality, but the FID can also show modulation and decay changes.</li>
+<li>In real NMR work, shims are usually adjusted before acquisition, either manually or with automatic shimming.</li>
+</ul>
+<h2>Charts</h2>
+<h3 id="rawRealFID">Real FID without processing</h3>
+<p>This chart shows the raw real time-domain FID generated from the active peaks. It is the first quadrature channel before noise, mangle controls, apodization, shimming, or Fourier transformation.</p>
+<p>Use it to see:</p>
+<ul>
+<li>how peak position changes FID frequency;</li>
+<li>how each peak&#x27;s T2 changes its decay envelope;</li>
+<li>how coupling changes the waveform complexity;</li>
+<li>how the real channel differs from the imaginary channel.</li>
+</ul>
+<h3 id="rawImaginaryFID">Imaginary FID without processing</h3>
+<p>This chart shows the raw imaginary time-domain FID. Together with the real FID, it represents quadrature detection.</p>
+<p>Use it to see:</p>
+<ul>
+<li>the second detection channel before processing;</li>
+<li>phase relationship between real and imaginary channels;</li>
+<li>how both channels carry information that becomes the spectrum.</li>
+</ul>
+<h3 id="processedRealFID">Real FID after processing</h3>
+<p>This chart shows the real FID after the processing pipeline. Depending on the active controls, it can include scan scaling, shimming, real-channel scaling, real-channel offset, noise, gain clipping, first-point delay, first-point scaling, and apodization.</p>
+<p>The dashed green line is the apodization function. If no apodization is active, it stays flat.</p>
+<p>Use it to see:</p>
+<ul>
+<li>how processing changes the real time-domain data before transformation;</li>
+<li>whether offset, scaling, clipping, or noise has damaged the FID;</li>
+<li>how apodization weights early and late points.</li>
+</ul>
+<h3 id="processedImaginaryFID">Imaginary FID after processing</h3>
+<p>This chart shows the imaginary FID after the processing pipeline. It uses the same acquisition and apodization operations as the processed real chart, except controls that explicitly affect only the real channel do not directly scale or offset the imaginary channel.</p>
+<p>Use it to see:</p>
+<ul>
+<li>how noise, gain clipping, shimming, delay, and apodization affect the imaginary channel;</li>
+<li>how mismatches between real and imaginary channels can become spectral artifacts.</li>
+</ul>
+<h3 id="spectrum">Spectrum after FID is processed and Fourier transformed</h3>
+<p>This chart shows the final frequency-domain spectrum. It is calculated by Fourier transforming the processed real and imaginary FID channels, then applying phase correction to display the real spectrum.</p>
+<p>When you open a processed JCAMP-DX spectrum, its real values are displayed directly. The app does not inverse Fourier transform it to invent an FID, and apodization, Fourier-transform, and phase controls are hidden because those steps have already been performed. An imported imaginary component is retained with the dataset but is not displayed.</p>
+<p>The yellow diamond marks the phase pivot point. Drag it horizontally to change the pivot.</p>
+<p>Use it to see:</p>
+<ul>
+<li>peak position and width;</li>
+<li>coupling patterns;</li>
+<li>signal-to-noise changes;</li>
+<li>truncation and apodization effects;</li>
+<li>baseline effects from first-point scaling or FID offset;</li>
+<li>artifacts from gain overload, delayed acquisition, channel imbalance, and bad shims;</li>
+<li>zero-order and first-order phase correction.</li>
+</ul>
+<h2 id="chartInteraction">Chart Interaction</h2>
+<p>Each chart supports:</p>
+<ul>
+<li>panning by dragging in the plot area;</li>
+<li>pinch zooming where the platform supports it;</li>
+<li>a reset-scale button for that individual chart;</li>
+<li>graph audio playback where available;</li>
+<li>accessibility labels summarizing the visible data range.</li>
+</ul>
+<p>The final spectrum additionally supports dragging the yellow phase pivot marker.</p>
+<p>Use the expand button in the spectrum header to open a spectrum-only workspace, then use the close button to return. Simulated data keeps every control panel available in the overlay; Bruker, Varian, and JEOL JDF FIDs keep the Apodization, Fourier Transform, and Phase Spectrum panels. Their ppm scale is approximate and unreferenced: it uses the recorded spectral width and observe frequency, with 0 ppm at the right edge.</p>
+<h2 id="practicalExperiments">Practical Experiments</h2>
+<h3>Peak width and decay</h3>
+<ol>
+<li>Turn on one peak.</li>
+<li>In <strong>Relaxation &amp; Integration</strong>, move that peak&#x27;s <strong>relaxation time (T1 = T2)</strong> lower and higher.</li>
+<li>Compare the FID length with the final peak width.</li>
+</ol>
+<p>Shorter FIDs produce broader peaks. Longer FIDs produce sharper peaks.</p>
+<h3>Zero filling</h3>
+<ol>
+<li>Turn <strong>Zero fill</strong> off.</li>
+<li>Observe the final spectrum point spacing.</li>
+<li>Turn <strong>Zero fill</strong> on.</li>
+</ol>
+<p>The spectrum becomes more smoothly interpolated, but the underlying measured information has not increased.</p>
+<h3>Signal averaging</h3>
+<ol>
+<li>Enable <strong>Add noise to FID</strong>.</li>
+<li>Increase the noise level.</li>
+<li>Increase <strong>Number of scans</strong>.</li>
+</ol>
+<p>Noise decreases slowly relative to scan count because signal-to-noise improves with the square root of the number of scans.</p>
+<h3>Apodization tradeoff</h3>
+<ol>
+<li>Enable <strong>Line broadening</strong>.</li>
+<li>Increase the slider.</li>
+<li>Watch the processed FID shorten and the final spectrum broaden.</li>
+</ol>
+<p>Line broadening can improve signal-to-noise and reduce truncation artifacts, but it costs resolution.</p>
+<h3>Phase correction</h3>
+<ol>
+<li>Use the final spectrum.</li>
+<li>Drag the yellow pivot marker to a peak or to the right side of the spectrum.</li>
+<li>Adjust <strong>Zero order</strong> and <strong>First order</strong> until the displayed peaks look absorptive.</li>
+</ol>
+<h3>Shimming</h3>
+<ol>
+<li>Enable <strong>Shimming</strong>.</li>
+<li>Move one <code>Z</code> shim at a time.</li>
+<li>Watch the final spectrum distort.</li>
+<li>Use <strong>Reset zeroes</strong> to return to an ideal field.</li>
+</ol>
+<h2 id="glossary">Glossary</h2>
+<p><strong>Apodization</strong><br>A mathematical window applied to the FID before Fourier transformation.</p>
+<p><strong>FID</strong><br>Free induction decay, the time-domain signal collected in an NMR experiment.</p>
+<p><strong>Fourier transform</strong><br>The operation that converts the time-domain FID into a frequency-domain spectrum.</p>
+<p><strong>Line broadening</strong><br>Exponential apodization that damps the FID and broadens peaks.</p>
+<p><strong>Phase correction</strong><br>The process of combining transformed real and imaginary data so peaks appear in the desired absorptive shape.</p>
+<p><strong>Quadrature detection</strong><br>Detection using real and imaginary channels.</p>
+<p><strong>Shimming</strong><br>Adjusting magnetic-field correction coils so the field is homogeneous through the sample.</p>
+<p><strong>Zero filling</strong><br>Appending zero-valued points to the FID before Fourier transformation to improve digital interpolation in the spectrum.</p>
+<h2 id="advancedNotes">Advanced Notes</h2>
+<p>These details are useful for technical review, but should not be the first explanation shown to most users.</p>
+<ol>
+<li>The <strong>Coupling</strong> slider is displayed as <code>0...50</code>. Internally, the simulator divides the displayed slider value by <code>50</code> before applying coupling, so the internal coupling value spans <code>0.0...1.0</code>.</li>
+<li>The help uses standard NMR terminology for phase: zero-order phase is the constant rotation, first-order phase is the linear phase term, and the pivot is where first-order phase contribution is zero.</li>
+</ol></article>
+    </div>
+    </main>
+  <footer class="site-footer">
+    <p>NMR Tutor support and documentation · <a href="mailto:utchemnmr@gmail.com">utchemnmr@gmail.com</a></p>
+    <details class="language-menu">
+      <summary>Languages</summary>
+      <div class="language-links"><a href="/nmrtutor/en/help/" hreflang="en" lang="en" aria-current="page">English</a>
+<a href="/nmrtutor/de/help/" hreflang="de" lang="de">Deutsch</a>
+<a href="/nmrtutor/es/help/" hreflang="es" lang="es">Español</a>
+<a href="/nmrtutor/es-419/help/" hreflang="es-419" lang="es-419">Español (Latinoamérica)</a>
+<a href="/nmrtutor/fr/help/" hreflang="fr" lang="fr">Français</a>
+<a href="/nmrtutor/ja/help/" hreflang="ja" lang="ja">日本語</a>
+<a href="/nmrtutor/ko/help/" hreflang="ko" lang="ko">한국어</a>
+<a href="/nmrtutor/pt-BR/help/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="/nmrtutor/zh-Hans/help/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="/nmrtutor/zh-Hant/help/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></div>
+    </details>
+  </footer>
+</body>
+</html>
