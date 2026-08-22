@@ -129,10 +129,16 @@ def page_shell(
 <body>
   <a class="skip-link" href="#main">{escape(nav['skip'])}</a>
   <header class="site-header">
-    <a class="brand" href="{escape(route(locale, 'home'))}">
-      <img src="/attenuator/assets/app-icon.png" width="44" height="44" alt="">
-      <span>Attenuator</span>
-    </a>
+    <div class="app-switcher">
+      <a class="brand" href="{escape(route(locale, 'home'))}">
+        <img src="/attenuator/assets/app-icon.png" width="44" height="44" alt="">
+        <span>Attenuator</span>
+      </a>
+      <a class="companion-app" href="/nmrtutor/">
+        <img src="/nmrtutor/assets/app-icon.png" width="32" height="32" alt="">
+        <span>NMR Tutor</span>
+      </a>
+    </div>
     <nav class="primary-nav" aria-label="Attenuator">{nav_links}</nav>
   </header>
   <main id="main">{main}</main>
