@@ -99,6 +99,10 @@ def validate() -> None:
             raise AssertionError(f"{path}: missing canonical metadata")
         if sorted(parser.alternates) != sorted((*LOCALES, "x-default")):
             raise AssertionError(f"{path}: incomplete hreflang metadata")
+        if source.count('href="/nmrtutor/"') != 1:
+            raise AssertionError(f"{path}: expected one NMR Tutor header link")
+        if source.count('src="/nmrtutor/assets/app-icon.png"') != 1:
+            raise AssertionError(f"{path}: expected one NMR Tutor header icon")
         for src, alt in parser.images:
             if alt is None:
                 raise AssertionError(f"{path}: image is missing alt text: {src}")
